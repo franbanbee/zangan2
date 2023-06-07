@@ -1,0 +1,87 @@
+/* @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,regular,500,700,900"); */
+*{
+  /* margin: 0; */
+  /* padding: 0; */
+  /* list-style: none; */
+  /* font-family: 'Noto Sans TC',sans-serif; */
+}
+body{
+    /* background-color: #000; */
+}
+
+/* 整列麵包屑 */
+.wrap,
+#media_page .wrap{
+    margin: 20px 17px;
+    /* border: solid 3px red; */
+    /* padding: 10px 0; */
+    /* background-color: #3c6382; */
+    /* box-shadow: 0px 5px 5px rgba(51, 84, 110, 0.6) */
+}
+
+.breadcrumb,
+#media_page .breadcrumb{
+    width: 90%;
+    /* margin: auto; */
+    display:flex;
+    /* border: solid 2px red;  */
+}
+.breadcrumb li{
+    /* padding: 0 20px; */
+    /* background-color: #fff; */
+    /* border: solid 2px red;  */
+}
+.breadcrumb a ,
+#media_page .breadcrumb a{
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight:500;
+    transition: .5s;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background-color: #fff;
+    /* border: solid 2px red; */
+}
+
+/* 首頁 */
+.news_box0,
+#media_page .news_box0{
+    margin: 1px 5px 1px -5px;
+}
+/* 最新消息 */
+.news_box,
+#media_page .news_box{
+    padding: 0 10px;
+    margin: -15px -5px -15px 5px;
+    /* border: solid 2px rgb(231, 187, 187); */
+}
+
+/* [活動快訊] 11月美學下午茶報名開始了～ */
+.news_box2,
+#media_page .news_box2{
+    padding: 0;
+    margin: -15px 5px -15px -5px;
+    /* border: solid 2px rgb(221, 81, 81); */
+}
+
+.breadcrumb li + li,
+#media_page .breadcrumb li + li{
+    padding-left: 0;
+}
+.breadcrumb li + li:before,
+#media_page .breadcrumb li + li:before{
+    content: '>';
+    color: #1d1d1d;
+    /* margin-right: 20px; */
+}
+.breadcrumb li:last-child a,
+.breadcrumb a:hover,
+#media_page .breadcrumb li:last-child a,
+#media_page .breadcrumb a:hover{
+    color: #1d1d1d;
+    border-radius: 35px;
+    /* background-color: rgba(240,240,240,0.3); */
+    padding: 0 20px;
+}
+
+/* media的麵包屑 */
