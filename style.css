@@ -162,7 +162,7 @@ body {
     font-family: 'Noto Serif TC', serif, 'Unna', serif, 'Cinzel', serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
@@ -180,44 +180,55 @@ a {
 }
 
 h1 {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 1.5rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     padding: 5px 0;
 }
 
 h2 {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
 }
 
 h3 {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1D201D;
-    letter-spacing: 2px;
-    /* letter-spacing: 0.1rem; */
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
 }
 
 h4 {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 0.75rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
 }
 
 .more {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
 }
-img{
+
+img {
     display: block;
     width: 100%;
 }
 
-.date{
+.date {
     font-family: 'Unna', serif;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1D201D;
     letter-spacing: 1rem;
     letter-spacing: 0.12rem;
@@ -226,7 +237,7 @@ img{
 
 /* topbar */
 #topbar,
-#topbarw{
+#topbarw {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -237,38 +248,38 @@ img{
     z-index: 9999;
 }
 
-#topbarw{
+#topbarw {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
 .menu,
-.icon{
+.icon {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin:  10px 40px;
+    margin: 10px 40px;
     /* border: solid 3px red; */
 }
 
 .menu li,
-.icon li{
+.icon li {
     margin: 5px 10px;
     /* border: solid 3px red; */
 }
 
 #topbar h3,
-#topbarw h3{
+#topbarw h3 {
     color: #fff;
 }
 
 #topbar .logo img,
-#topbarw .logo img{
+#topbarw .logo img {
     display: block;
     margin-right: 30px;
     /* border: solid 3px red;  */
 }
 
-.icon_signup{
+.icon_signup {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -278,7 +289,7 @@ img{
     width: 130px;
 }
 
-.icon_signup img{
+.icon_signup img {
     width: 20px;
     height: 20px;
 }
@@ -290,14 +301,145 @@ img{
     width: 70px;
 }
 
-.icon_login h3{
+.icon_login h3 {
     width: 60px;
 }
 
-.icon_login img{
+.icon_login img {
     width: 25px;
     height: 25px;
     margin: 0 5px;
+}
+
+/* RWD手機 */
+@media (max-width:576px) {
+    #topbar ul {
+        justify-content: center;
+    }
+
+    .icon {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .icon a {
+        margin: 0 2px;
+    }
+
+    /* 漢堡按鈕  */
+    .nav_box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 40px;
+    }
+
+    /* .navigation {
+        display: flex;
+        justify-content: space-between;
+    } */
+
+    .hamburger {
+        /* 自動抓內容.bar的尺寸 */
+        display: inline-block;
+        cursor: pointer;
+        /* 取消button的預設樣式 */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .bar {
+        /* 修改span行內元素為區塊 */
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #333;
+        /* 轉場動態 */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu {
+        flex-direction: column;
+        /* 以下取消玻璃擬態效果 */
+        /* 玻璃擬態/毛玻璃 */
+        background-color: transparent;
+        /* 背景模糊 一定要搭配背景半透明 */
+        backdrop-filter: none;
+        /* 修改input邊框的預設樣式 */
+        border: none;
+        /* 玻璃陰影+玻璃黑的陰影 */
+        box-shadow: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        /* border: #a35472 solid 5px; */
+    }
+
+    #menu a {
+        padding: 15px 10px;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: 20px;
+        border-radius: 5px;
+        /*   height: 100%; */
+        /* 玻璃擬態/毛玻璃 */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* 背景模糊 一定要搭配背景半透明 */
+        backdrop-filter: blur(3px);
+        /* 修改input邊框的預設樣式 */
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        /* 玻璃陰影+玻璃黑的陰影 */
+        box-shadow: inset -1px -1px -1px rgba(255, 255, 255, 0.3), 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+        /* background-color: rgba(0, 0, 0, 0.3); */
+        display: none;
+        animation: navigation 0.35s both;
+        /* border: #a35472 solid 5px; */
+    }
+
+    @keyframes navigation {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .navigation.show {
+        display: block;
+        animation: show 0.35s both;
+    }
+
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 }
 
 /* 2.banner */
@@ -331,8 +473,9 @@ img{
     width: 100%;
     height: 100%;
 }
+
 /* 背景圖片 */
-#banner figure{
+#banner figure {
     display: block;
     /* width: 100%; */
     height: 90vh;
@@ -340,6 +483,7 @@ img{
     top: 0;
     left: 0;
 }
+
 #banner .text {
     color: #fff;
     display: flex;
@@ -362,7 +506,8 @@ img{
     align-items: center;
     margin: 30px;
 }
-#banner .more img{
+
+#banner .more img {
     margin: -6px 0 2px;
     width: 50px;
     height: 50px;
@@ -376,14 +521,16 @@ img{
 }
 
 #banner h2 {
-    font-size: 38px;
+    /* font-size: 38px; */
+    font-size: 2.375rem;
     padding: 20px 0;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
 #banner h4 {
     margin: 10px;
-    font-size: 34px;
+    /* font-size: 34px; */
+    font-size: 2.125rem;
     color: #fff;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
@@ -397,26 +544,31 @@ img{
     background-image: url(img/index/index-media/arrow\(黑\).svg);
 }
 
+@media (max-width:576px) {
+    #banner video {
+        width: 70%;
+    }
+}
+
 /* 3.about */
 #about {
     /* height: 100vh; */
     /* height: 650px; */
     display: flex;
     /* justify-content: space-around; */
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     /* align-items: center; */
     /* border: solid 5px salmon;  */
 }
 
-#about li{
+#about li {
     margin: 10px 0;
     /* border: solid 5px rgb(155, 83, 75); */
 }
 
-#about .area{
+#about .area {
     /* margin: 60px 0 0 50px; */
-
     width: 42%;
     height: 80vh;
     /* margin-right: 50px; */
@@ -424,55 +576,61 @@ img{
     /* border: solid 5px rgb(235, 82, 65); */
 }
 
-#about .area h3{
+#about .area h3 {
     margin: 20px 0;
     font-family: 'Unna', serif;
     /* border: solid 5px salmon;  */
 }
 
-#about hr{
+#about hr {
     width: 500px;
     margin: 0;
 }
 
-#about .area h1{
-    font-size: 34px;
+#about .area h1 {
+    /* font-size: 34px; */
+    font-size: 2.125rem;
     font-weight: 600;
     margin: 20px 0;
 }
 
-#about .area h4{
-    font-size: 14px;
+#about .area h4 {
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     line-height: 1rem;
     letter-spacing: 0.018rem;
 }
 
 /*查看更多 */
-.more{
+.more {
     margin-top: 5px;
     /* border: solid 5px salmon; */
 }
-.more a{
+
+.more a {
     margin-bottom: -8px;
     /* border: solid 5px salmon; */
 }
-.more h3{
-    font-size: 14px;
+
+.more h3 {
+    /*font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 500;
     /* border: solid 5px salmon; */
 }
-.more img{
+
+.more img {
     width: 100px;
     height: 10px;
     margin-top: -25px;
 }
 
-#about .img_area{
+#about .img_area {
     height: 90vh;
     /* border: solid 5px salmon;  */
 }
 
-.p1 img{
+.p1 img {
     width: 50%;
     height: 45vh;
     margin: -250px 0 0 -155px;
@@ -480,14 +638,13 @@ img{
     object-fit: cover;
 }
 
-.p2 img{
+.p2 img {
     height: 90vh;
     object-fit: cover;
     /* border: solid 5px rgb(212, 165, 160); */
 }
 
-#about .bg_logo img{
-
+#about .bg_logo img {
     margin-top: 165px;
     position: absolute;
     z-index: 99;
@@ -513,7 +670,7 @@ img{
 #course h3 {
     color: #fff;
     /* letter-spacing: 1px; */
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.063rem;
     padding: 0 5px;
 }
 
@@ -528,30 +685,30 @@ img{
 }
 
 /*單一區塊 */
-#course li{
+#course li {
     margin: 0 23px;
 }
 
-#course .cblock h3{
+#course .cblock h3 {
     font-size: 0.875rem;
 }
 
 /* 調整圖片區塊上下位置 */
 #course .item1,
-#course .item3{
+#course .item3 {
     display: block;
     margin-bottom: 70px;
     /* border: solid 5px rgb(212, 165, 160); */
 }
 
-#course .item5{
+#course .item5 {
     display: block;
     margin-bottom: -210px;
     /* border: solid 5px rgb(212, 165, 160);  */
 }
 
 #course .item2,
-#course .item4{
+#course .item4 {
     margin-top: 120px;
 }
 
@@ -627,7 +784,7 @@ img{
     /* border: solid 5px rgb(247, 98, 123); */
 }
 
-#teachers hr{
+#teachers hr {
     margin: 0;
 }
 
@@ -640,7 +797,8 @@ img{
 
 #teachers h4 {
     color: #fff;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     writing-mode: vertical-lr;
 }
 
@@ -692,9 +850,11 @@ img{
 /* 師資名字 */
 #teachers h2 {
     color: #fff;
-    font-size: 26px;
+    /* font-size: 26px; */
+    font-size: 1.625rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     writing-mode: vertical-lr;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
     margin: 3px 5px 5px 15px;
@@ -709,8 +869,10 @@ img{
 /* 師資學歷 */
 .teachers_college {
     flex: 1;
-    font-size: 14px;
-    letter-spacing: 3.5px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
+    /* letter-spacing: 3.5px; */
+    letter-spacing: 0.219rem;
     font-weight: lighter;
     margin: 5px 5px;
     width: 22px;
@@ -722,7 +884,8 @@ img{
 /* 師資擅長 */
 .teachers_best {
     flex: 1;
-    letter-spacing: 3.5px;
+    /* letter-spacing: 3.5px; */
+    letter-spacing: 0.219rem;
     font-weight: lighter;
     margin: 23px 5px 5px 5px;
     width: 24px;
@@ -886,7 +1049,7 @@ img{
     margin: 25px 10px 0 0;
 }
 
-#news .more h3{
+#news .more h3 {
     /* margin: 0 0 -20px 0; */
 }
 
@@ -908,14 +1071,14 @@ img{
     width: 100%;
 }
 
-#news .text{
-    margin: 20px 20px 20px 0  ;
+#news .text {
+    margin: 20px 20px 20px 0;
 }
 
 /* hr */
 #news hr {
     width: 100%;
-    margin: 10px 0 ;
+    margin: 10px 0;
 }
 
 /*活動快訊  */
@@ -925,7 +1088,7 @@ img{
 }
 
 /* :hover */
-#news .arrow img{
+#news .arrow img {
     background-image: url(img/index/index-news/arrow\(白\).svg);
 }
 
@@ -957,19 +1120,21 @@ img{
 /* MEDIA */
 #media .nav h3 {
     font-family: 'Unna', serif;
-    font-size: 14px;
+    /* font-size: 14px; */
+    letter-spacing: 0.875rem;
 }
 
 /* 2023.1.16 */
-#media li h3{
-    margin: 10px 0 ;
+#media li h3 {
+    margin: 10px 0;
     /* border: solid 5px salmon;  */
 }
 
 /* hr */
-#media .span{
+#media .span {
     width: 50%;
 }
+
 #media .nav hr {
     margin-top: 25px;
     width: 100%;
@@ -986,19 +1151,23 @@ img{
 
 /* 【課程快訊】手作花藝課程邀請網紅講師Lori分<br> 享插花技巧，快來一起學習吧！ */
 #media h2 {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     line-height: 1rem;
     font-weight: 700;
     margin-top: -10px;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     /* border: solid 5px rgb(221, 175, 170); */
 }
 
 /* 您是否曾經想過要自己製作一束美麗的花束，但卻不知道該如何下手呢？質感工作室特別邀請到插花網... */
 #media h3 {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     line-height: 1rem;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 0.75rem;
 }
 
 /* logo */
@@ -1042,7 +1211,8 @@ img{
 }
 
 #media .more h3 {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
@@ -1058,7 +1228,7 @@ img{
     height: 50vh;
 }
 
-#footer img{
+#footer img {
     width: 30%;
 }
 
@@ -1080,7 +1250,8 @@ img{
 
 .copyright {
     color: #fff;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 0.75rem;
     font-family: 'Unna', serif;
     padding: 30px 0;
     /* margin-bottom: 30px; */
@@ -1089,7 +1260,8 @@ img{
 
 #footer h1 {
     color: #fff;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 1.875rem;
     font-family: 'Unna', serif;
 }
 
@@ -1097,38 +1269,38 @@ img{
     color: #E7E4DB;
 }
 
-#footer li{
+#footer li {
     margin: 30px 0 0 0;
     /* border: solid 3px red; */
 }
 
-.footer_main{
+.footer_main {
     /* margin-top:-30px ; */
-} 
+}
 
-#footer h3 .addr{
+#footer h3 .addr {
     margin: 10px 0;
     /* border: solid 3px rgb(200, 134, 134); */
 }
 
-#footer h3 .time{
-    margin:30px 0 10px 0 ;
+#footer h3 .time {
+    margin: 30px 0 10px 0;
     /* border: solid 3px rgb(200, 134, 134);  */
-} 
+}
 
-#footer h3 .time h3{
+#footer h3 .time h3 {
     margin: 10px 0 0 0;
     /* border: solid 3px rgb(200, 134, 134);  */
 }
 
-.icon_soc img{
+.icon_soc img {
     /* padding-top: 20px 0; */
     margin: 20px 0;
     /* padding-bottom: 50px ; */
     /* border: solid 3px rgb(200, 134, 134); */
 }
 
-#footer .faq{
+#footer .faq {
     margin-top: -150px;
     /* border: solid 3px rgb(200, 134, 134);  */
 }
@@ -1149,7 +1321,8 @@ img{
 
 #signup0 h4 {
     color: #797474;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     /* border: solid 5px salmon; */
 }
 
@@ -1184,7 +1357,7 @@ img{
     position: relative;
     height: 40vh;
     /* margin: 0 auto; */
-    margin-left:-270px ;
+    margin-left: -270px;
     /* border: solid 3px salmon;  */
 }
 
@@ -1244,7 +1417,8 @@ img{
     /* height: 2.5px; */
     /* border: solid 3px pink; */
 }
-#signup0 .box1 hr{
+
+#signup0 .box1 hr {
     border: solid #DACFB8 1px;
 }
 
@@ -1283,13 +1457,14 @@ img{
 }
 
 /* 加入預約清單 箭頭 */
-#signup0 .arrow_w{
+#signup0 .arrow_w {
     width: 9.75%;
     height: 7.75vh;
     margin: 0 32px 0 10px;
     /* border: solid 3px red; */
     background-image: url(img/index/index-news/arrow\(白\).svg);
 }
+
 /* 箭頭hover */
 #signup0 .arrow_w:hover {
     width: 9.75%;
@@ -1677,7 +1852,8 @@ img{
     align-items: center;
     margin-top: 20px;
 }
-#cart h3{
+
+#cart h3 {
     margin-bottom: 10px;
 }
 
@@ -1719,18 +1895,22 @@ img{
 
 /*  您好，林洛洛！  */
 #cart .deta .bold {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 700;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    font-size: 0.125rem;
     /* border: solid 5px salmon; */
 }
 
 /*  請確認以下預約的課程是否正確，謝謝配合。 */
 #cart p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    font-size: 0.125rem;
     margin: 10px 0;
 }
 
@@ -1738,7 +1918,8 @@ img{
 #cart .deta .eng {
     font-weight: 700;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    font-size: 0.125rem;
     font-family: 'Unna', serif;
 }
 
@@ -1753,9 +1934,10 @@ img{
 }
 
 /* Course */
-#cart .course_c{
-    margin-left:50px ;
-} 
+#cart .course_c {
+    margin-left: 50px;
+}
+
 /*cart: Course Price Quantity Subtotal 單一個 */
 #cart .bar h3 {
     margin-right: 90px;
@@ -1796,6 +1978,7 @@ img{
 #cart .tea h2 {
     color: #5C5C5C;
 }
+
 /*週五下午14:00-16:00，共6堂...  */
 #cart .tea .friday {
     /* margin: 0 80px; */
@@ -1859,7 +2042,8 @@ img{
 .add1,
 .count1 {
     display: inline-block;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
 }
 
 .minus,
@@ -2020,9 +2204,7 @@ img{
 
 
 /* reserve 預約成功區 */
-#reserve {
-
-}
+#reserve {}
 
 /* 上面導覽列 */
 #reserve .nav {
@@ -2068,26 +2250,32 @@ img{
 
 /*  您好，林洛洛！  */
 #reserve .deta .bold {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 700;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
 }
 
 /*  您好，林洛洛！如需查看訂單資訊可至會員查看。 */
 #reserve p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     margin-top: 10px;
 }
 
 /* 如需查看訂單資訊可至會員查看。 */
 #reserve .text {
     display: flex;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #797474;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     margin-bottom: 10px;
 }
 
@@ -2326,7 +2514,7 @@ img{
     /* border: solid 5px rgb(228, 147, 147); */
 }
 
-#news_content .img2{ 
+#news_content .img2 {
     display: block;
     width: 24%;
     /* height: 80vh; */
@@ -2341,18 +2529,22 @@ img{
 }
 
 .news_date {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1d201d;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     padding: 10px;
     text-align: start;
     width: 700px;
 }
 
 .news_text {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
     color: #1d201d;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     padding: 10px;
     margin: 10 0px;
     text-align: start;
@@ -2360,7 +2552,8 @@ img{
 }
 
 #news h1 {
-    font-size: 34px;
+    /* font-size: 34px; */
+    font-size: 2.125rem;
     color: #1D201D;
 }
 
@@ -2391,7 +2584,7 @@ img{
     /* border: solid 5px rgb(144, 178, 213); */
 }
 
-.news_news .hr1{
+.news_news .hr1 {
     margin-bottom: 10px;
     /* border: solid 5px rgb(144, 178, 213); */
 }
@@ -2418,7 +2611,8 @@ img{
 }
 
 .news_date {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     padding: 10px;
     margin: 10 0px;
     text-align: start;
@@ -2427,7 +2621,8 @@ img{
 }
 
 .news_text {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
     padding: 10px;
     margin: 10 0px;
     text-align: start;
@@ -2436,7 +2631,7 @@ img{
 }
 
 /* ------news_page-最新消息詳情頁----- */
-#news_page{
+#news_page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2450,7 +2645,7 @@ img{
 /* 主要區塊 */
 /* 框住date和section的範圍block */
 /* 水平 */
-.news_page_block{
+.news_page_block {
     background-color: rgba(240, 240, 240, .3);
     display: flex;
     justify-content: center;
@@ -2462,10 +2657,12 @@ img{
 
 /* 日期 */
 #news_page .date {
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: 1.75rem;
     font-weight: 400;
-    color: rgba(101,101,101,0.5);
-    letter-spacing: 1px;
+    color: rgba(101, 101, 101, 0.5);
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     margin: 30px 20px 30px 0;
     font-family: 'Unna', serif;
     /* border: #cf5a85 5px solid; */
@@ -2487,7 +2684,7 @@ img{
 }
 
 /* news更多詳情+media瞭解課程 */
-#news_page .more a{
+#news_page .more a {
     display: flex;
     text-decoration: none;
     background-color: #3C4935;
@@ -2506,9 +2703,11 @@ img{
 
 /* 文字內容 */
 .news_page_text {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1D201D;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     padding: 10px 0;
     margin: 10px 0;
     text-align: start;
@@ -2541,18 +2740,20 @@ img{
     height: 80vh;
     /* margin-left: 760px; */
     /* margin-top: -400px; */
-    margin: -390px 0 0 480px ;
+    margin: -390px 0 0 480px;
     /* border: #7a15d3 5px solid; */
 }
 
-.news_page_title h1{
-    font-size: 24px;
+.news_page_title h1 {
+    /* font-size: 24px; */
+    font-size: 1.5rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     line-height: 1.2rem;
 }
 
-.news_page_text p{
+.news_page_text p {
     line-height: 1.2rem;
     margin: 20px 0;
     /* border: solid 1px blue; */
@@ -2626,7 +2827,7 @@ img{
     /* margin-bottom: 40px; */
 }
 
-#media_area .subnav a h2:hover{
+#media_area .subnav a h2:hover {
     color: #fff;
 }
 
@@ -2645,7 +2846,7 @@ img{
     /* border: solid 3px red; */
 }
 
-#media_area .subnav h2{
+#media_area .subnav h2 {
     color: #3C4935;
     /* border: solid 3px red;  */
 }
@@ -2661,16 +2862,19 @@ img{
 }
 
 /* 閱讀更多 */
-#media_area .more{
+#media_area .more {
     margin-top: 5px;
     margin-left: 490px;
 }
-#media_area .more a{
+
+#media_area .more a {
     margin-bottom: 20px;
     /* border: solid 5px salmon; */
 }
-#media_area .more h3{
-    font-size: 14px;
+
+#media_area .more h3 {
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
@@ -2723,23 +2927,23 @@ p {
 }
 
 /* MEDIA */
-#media_area .title h3{
+#media_area .title h3 {
     font-family: 'Unna', serif;
 }
 
 /* 2023.1.16 */
-.media_date2{
+.media_date2 {
     font-family: 'Unna', serif;
 }
 
 /* 【課程快訊】手作... */
-#media_area .list_box h2{
+#media_area .list_box h2 {
     font-weight: 700;
 }
 
 
 /* ------media_page-文章詳情頁----- */
-#media_page{
+#media_page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2751,7 +2955,7 @@ p {
 }
 
 /* 主要區塊 框住date和section的範圍block 水平 */
-.media_page_block{
+.media_page_block {
     background-color: rgba(240, 240, 240, .3);
     display: flex;
     justify-content: center;
@@ -2763,10 +2967,12 @@ p {
 
 /* 日期 */
 #media_page .date {
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: 1.75rem;
     font-weight: 400;
-    color: rgba(101,101,101,0.5);
-    letter-spacing: 1px;
+    color: rgba(101, 101, 101, 0.5);
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     margin: 30px 20px 30px 0;
     font-family: 'Unna', serif;
     /* border: #cf5a85 5px solid; */
@@ -2774,7 +2980,8 @@ p {
 
 /* 6.16 */
 #media_page .day {
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
+    letter-spacing: 0.313rem;
     margin-bottom: -5px;
     /* border: #cf5a85 5px solid; */
 }
@@ -2788,14 +2995,15 @@ p {
 }
 
 /* news更多詳情+media瞭解課程 */
-#media_page .more a{
+#media_page .more a {
     display: flex;
     text-decoration: none;
     background-color: #3C4935;
     border-radius: 20px;
     opacity: 0.85;
     color: #fff;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     width: 130px;
     height: 40px;
     justify-content: center;
@@ -2807,9 +3015,11 @@ p {
 
 /* 文字內容 */
 .media_page_text {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     color: #1D201D;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     padding: 10px 0;
     margin: 10px 0;
     text-align: start;
@@ -2839,11 +3049,11 @@ p {
     display: block;
     height: 35vh;
     /* margin: -3210px 0 0 495px ; */
-    margin: -3180px 0 0 495px ;
+    margin: -3180px 0 0 495px;
     /* border: #7a15d3 5px solid; */
 }
 
-.media_page_title{
+.media_page_title {
     font-weight: 700;
     display: flex;
     justify-content: flex-start;
@@ -2851,21 +3061,23 @@ p {
     /* border: #7a15d3 5px solid; */
 }
 
-.media_page_title h1{
+.media_page_title h1 {
     font-size: 24px;
+    font-size: 1.5rem;
     color: #1D201D;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    letter-spacing: 0.125rem;
     line-height: 1.2rem;
 }
 
 /* 社群按鈕 */
-.media_page_title img{
+.media_page_title img {
     width: 8%;
     height: 5vh;
     /* border: #c6acdd 5px solid; */
-} 
+}
 
-.media_page_text p{
+.media_page_text p {
     line-height: 1.2rem;
     margin: 20px 0;
     /* border: solid 1px blue; */
@@ -2917,7 +3129,7 @@ p {
     /* border: solid 3px rgb(224, 169, 169); */
 }
 
-.media_page_text h3{
+.media_page_text h3 {
     color: #797474;
     margin: 10px 0;
     letter-spacing: 0.12rem;
@@ -2944,7 +3156,7 @@ p {
     width: 1020px;
 }
 
-#media_page .text_block h3{
+#media_page .text_block h3 {
     margin: -40px 0 -60px;
     /* border: solid 1px red; */
 }
@@ -2957,6 +3169,7 @@ p {
     /* margin-left: -100px; */
     /* border: solid 5px rgb(232, 27, 4);  */
 }
+
 /* 
 #media_content .sect{
     width: 90%;
@@ -2973,20 +3186,22 @@ p {
 /* MEDIA */
 #media_content .nav h3 {
     font-family: 'Unna', serif;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     text-align: center;
 }
 
 /* 2023.1.16 */
-#media_content li h3{
-    margin: 10px 0 ;
+#media_content li h3 {
+    margin: 10px 0;
     /* border: solid 5px salmon;  */
 }
 
 /* hr */
-#media_content .span{
+#media_content .span {
     width: 50%;
 }
+
 #media_content .nav hr {
     margin-top: 25px;
     width: 100%;
@@ -3003,19 +3218,23 @@ p {
 
 /* 【課程快訊】手作花藝課程邀請網紅講師Lori分<br> 享插花技巧，快來一起學習吧！ */
 #media_content h2 {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     line-height: 1rem;
     font-weight: 700;
     margin-top: -10px;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     /* border: solid 5px rgb(221, 175, 170); */
 }
 
 /* 您是否曾經想過要自己製作一束美麗的花束，但卻不知道該如何下手呢？質感工作室特別邀請到插花網... */
 #media_content h3 {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    letter-spacing: 0.063rem;
     line-height: 1rem;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 0.75rem;
 }
 
 /* logo */
@@ -3059,6 +3278,7 @@ p {
 }
 
 #media_content .more h3 {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.875rem;
     font-weight: 500;
 }
