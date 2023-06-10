@@ -313,134 +313,37 @@ img {
 
 /* RWD手機 */
 @media (max-width:576px) {
-    #topbar ul {
-        justify-content: center;
-    }
-
-    .icon {
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .icon a {
-        margin: 0 2px;
-    }
-
-    /* 漢堡按鈕  */
-    .nav_box {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-right: 40px;
-    }
-
-    /* .navigation {
-        display: flex;
-        justify-content: space-between;
-    } */
-
-    .hamburger {
-        /* 自動抓內容.bar的尺寸 */
-        display: inline-block;
-        cursor: pointer;
-        /* 取消button的預設樣式 */
-        background-color: transparent;
-        border: none;
-        padding: 0;
-    }
-
-    .bar {
-        /* 修改span行內元素為區塊 */
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: #333;
-        /* 轉場動態 */
-        transition: all 0.3s ease-in-out;
-    }
-
-    .hamburger.is-active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.is-active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.is-active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .menu {
-        flex-direction: column;
-        /* 以下取消玻璃擬態效果 */
-        /* 玻璃擬態/毛玻璃 */
-        background-color: transparent;
-        /* 背景模糊 一定要搭配背景半透明 */
-        backdrop-filter: none;
-        /* 修改input邊框的預設樣式 */
-        border: none;
-        /* 玻璃陰影+玻璃黑的陰影 */
-        box-shadow: none;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        /* border: #a35472 solid 5px; */
-    }
-
-    #menu a {
-        padding: 15px 10px;
-    }
-
-    .navigation {
-        position: absolute;
-        top: 30px;
-        right: 0;
-        padding: 20px;
-        border-radius: 5px;
-        /*   height: 100%; */
-        /* 玻璃擬態/毛玻璃 */
-        background-color: rgba(255, 255, 255, 0.2);
-        /* 背景模糊 一定要搭配背景半透明 */
-        backdrop-filter: blur(3px);
-        /* 修改input邊框的預設樣式 */
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        /* 玻璃陰影+玻璃黑的陰影 */
-        box-shadow: inset -1px -1px -1px rgba(255, 255, 255, 0.3), 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
-        /* background-color: rgba(0, 0, 0, 0.3); */
+    #topbarw {
         display: none;
-        animation: navigation 0.35s both;
-        /* border: #a35472 solid 5px; */
-    }
-
-    @keyframes navigation {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
-    .navigation.show {
-        display: block;
-        animation: show 0.35s both;
-    }
-
-    @keyframes show {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
+        background-color: rgba(255, 255, 255, 0);
     }
 }
+
+/* RED手機 */
+@media (max-width:576px) {
+    #topbar {
+        display: none;
+    }
+}
+
+/* RWD桌機 */
+@media (min-width:992px) {
+    #topbar .nav_box {
+        display: none;
+    }
+
+    #topbar .hamburger {
+        display: none;
+    }
+}
+
+/* 漢堡按鈕 topbarrwd */
+
+/* RWD 漢堡按鈕 */
+/* @media (min-width:992px) {
+
+    
+} */
 
 /* 2.banner */
 #banner {
@@ -544,9 +447,37 @@ img {
     background-image: url(img/index/index-media/arrow\(黑\).svg);
 }
 
+/* RWD手機 */
 @media (max-width:576px) {
+    #banner {
+        width: 68%;
+        line-height: 70vh;
+        height: 70vh;
+    }
+
     #banner video {
-        width: 70%;
+        width: 68%;
+        height: 70vh;
+        object-fit: cover;
+    }
+
+    #banner .sec {
+        width: 100%;
+        height: 30vh;
+        line-height: 0.01rem;
+    }
+
+    #banner .text h1 {
+        font-size: 0.75rem;
+        letter-spacing: 0.01rem;
+    }
+
+    #banner .text h2 {
+        font-size: 1.1rem;
+    }
+
+    #banner .text h4 {
+        font-size: 1rem;
     }
 }
 
@@ -583,7 +514,8 @@ img {
 }
 
 #about hr {
-    width: 500px;
+    /* width: 500px; */
+    width: 40em;
     margin: 0;
 }
 
@@ -652,6 +584,70 @@ img {
     width: 40%;
     /* height: 20vh; */
     /* border: solid 3px red; */
+}
+
+/* RED手機 */
+@media (max-width:576px) {
+    #about {
+        width: 68%;
+        height: 70vh;
+    }
+
+    #about .area {
+        width: 100%;
+        height: 70vh;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    #about .p1 img {
+        display: none;
+    }
+
+    #about .p2 img {
+        width: 280px;
+        height: 250px;
+        margin: 430px 0 0 -270px;
+        object-fit: cover;
+    }
+
+    #about hr {
+        width: 15em;
+    }
+
+    #about .area h3 {
+        margin-bottom: -5px;
+    }
+
+    #about .area h1 {
+        font-weight: 400;
+        font-size: 1.35rem;
+        letter-spacing: 0.01rem;
+    }
+
+    #about .area h4 {
+        width: 105%;
+        font-weight: 500;
+        font-size: 0.7rem;
+        letter-spacing: 0.03rem;
+        line-height: 1.5rem;
+    }
+
+    #about .more h3 {
+        font-weight: 500;
+        font-size: 0.7rem;
+    }
+
+    #about .more img {
+        width: 30%;
+        height: 10vh;
+        margin-top: -35px;
+    }
+
+    #about .bg_logo img {
+        width: 63%;
+        margin-top: 210px;
+    }
 }
 
 /* 4.course */
@@ -758,10 +754,84 @@ img {
 } */
 
 /* bg_logo底圖logo */
-.bglogo1 img {
+#course .bglogo1 img {
     margin-top: 40px;
     object-fit: fill;
+    width: 90%;
     /* border: solid 5px rgb(219, 169, 132); */
+}
+
+/* RED手機 */
+@media (max-width:576px) {
+    #course {
+        width: 68%;
+        height: 110vh;
+    }
+
+    #course ul {
+        width: 100%;
+        height: 110vh;
+        margin-left: -480px;
+    }
+
+    #course li {
+        margin: 0;
+        width: 68%;
+    }
+
+    #course .cimg img {
+        width: 120px;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    #course .cblock {
+        display: none;
+    }
+
+    #course h3 {
+        font-weight: 500;
+        margin-left: -10px;
+        width: 80px;
+        font-size: 0.7rem;
+    }
+
+    #course .item1 {
+        margin: -850px 0 0 350px;
+        margin: -550px 0 0 350px;
+    }
+
+    #course .item2 {
+        margin: -650px -10px 0 10px;
+        margin: -350px -10px 0 10px;
+    }
+
+    #course .item3 {
+        margin: -280px 100px 0 -240px;
+        margin: 20px 100px 0 -240px;
+    }
+
+    #course .item4 {
+        margin: -100px 0 0 -90px;
+        margin: 200px 0 0 -90px;
+    }
+
+    #course .item5 {
+        margin: 500px 0 0 -250px;
+        margin: 800px 0 0 -250px;
+        margin: 600px 0 0 -250px;
+    }
+
+    #course .bglogo1 img {
+        display: none;
+        /* margin: -150px 0 0 150px; */
+        /* width: 50%; */
+        /* height: 15vh; */
+        /* width: 100px;
+        height: 150px;
+        border: solid 3px red; */
+        /* object-fit: cover; */
+    }
 }
 
 /* 5.teachers */
@@ -779,7 +849,7 @@ img {
 /* 標題區 */
 #teachers .nav {
     /* margin: -300px 0 0 105px; */
-    margin: -200px 0 0 50px;
+    margin: -235px 0 0 50px;
     /* height: 50vh; */
     /* border: solid 5px rgb(247, 98, 123); */
 }
@@ -918,7 +988,8 @@ img {
 }
 
 #teachers hr {
-    width: 500px;
+    /* width: 500px; */
+    width: 40em;
     margin-top: 15px;
 }
 
@@ -987,7 +1058,7 @@ img {
     /* height: 100vh; */
     display: flex;
     justify-content: flex-end;
-    margin: 50px 5px 0 100px;
+    margin: 30px 5px 0 100px;
     /* width: 100%;
     height: 300px;
     overflow: hidden; */
@@ -1010,6 +1081,46 @@ img {
     /* position: absolute;
     top: 550px;
     right: 105px; */
+    /* border: solid 3px red; */
+}
+
+/* RWD手機 */
+@media (max-width:576px) {
+    #teachers {
+        width: 68%;
+        height: 70vh;
+    }
+
+    #teachers .nav {
+        margin: -200px 0 0 10px;
+    }
+
+    #teachers .nav h3 {
+        margin-bottom: 10px;
+    }
+
+    #teachers .nav hr {
+        width: 15em;
+    }
+
+    #teachers .bglogo {
+        width: 55%;
+        height: 10vh;
+        position: absolute;
+        z-index: 9;
+        margin: -350px 0 0 -650px;
+    }
+
+    #teachers .track {
+        margin-top: 40px;
+    }
+}
+
+/* RWD桌電 */
+@media (min-width:992px) {
+    #teachers .bglogo {
+        display: none;
+    }
 }
 
 /* 6.news  */
@@ -1018,7 +1129,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: -60px; */
+    margin-top: -67px;
 }
 
 /* 左邊圖片 */
@@ -1077,7 +1188,8 @@ img {
 
 /* hr */
 #news hr {
-    width: 100%;
+    /* width: 100%; */
+    width: 40em;
     margin: 10px 0;
 }
 
@@ -1094,6 +1206,44 @@ img {
 
 #news .arrow img:hover {
     background-image: url(img/index/index-news/arrow\(黑\).svg);
+}
+
+/* RED手機 */
+@media (max-width:576px) {
+    #news {
+        width: 68%;
+        height: 70vh;
+        margin-top: 200px;
+    }
+
+    #news .pho img {
+        width: 265px;
+        height: 250px;
+        margin: -495px 0 0 0;
+        object-fit: cover;
+    }
+
+    #news .uu {
+        width: 100%;
+        margin: 400px 0 0 -265px;
+    }
+
+    #news .nav h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.01rem;
+    }
+
+    #news hr {
+        width: 15em;
+    }
+
+    #news .more {
+        margin: 10px -5px 0 0;
+    }
+
+    #news .arrow img {
+        display: none;
+    }
 }
 
 /* 7.media */
@@ -1121,7 +1271,7 @@ img {
 #media .nav h3 {
     font-family: 'Unna', serif;
     /* font-size: 14px; */
-    letter-spacing: 0.875rem;
+    font-size: 0.875rem;
 }
 
 /* 2023.1.16 */
@@ -1216,6 +1366,71 @@ img {
     font-weight: 500;
 }
 
+/* RED手機 */
+@media (max-width:576px) {
+    #media {
+        width: 68%;
+        height: 105vh;
+        margin-top: 300px;
+    }
+
+    #media .span {
+        width: 100%;
+        height: 80px;
+        margin: 0 0 0 -10px;
+    }
+
+    #media .span h3 {
+        margin: 50px 100px 0 0;
+    }
+
+    #media .nav img {
+        width: 240px;
+        height: 100px;
+        margin: -100px 0 0 -220px;
+    }
+
+    #media .span hr {
+        width: 15em;
+        margin-top: 8px;
+    }
+
+    #media .item4,
+    #media .item5,
+    #media .item6 {
+        display: none;
+    }
+
+    #media .main {
+        margin: 0 0 0 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #media h2 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        width: 85%;
+        line-height: 1.5em;
+    }
+
+    #media .img img {
+        width: 80%;
+        margin: -40px 0 -50px 0;
+    }
+
+    #media h3 {
+        width: 85%;
+        letter-spacing: 0.03rem;
+    }
+
+    #media .more {
+        margin-bottom: 30px;
+    }
+
+}
+
 /* 8.footer */
 #footer {
     background-color: #3C4935;
@@ -1226,6 +1441,7 @@ img {
     /* margin-top: 400px; */
     width: 100%;
     height: 50vh;
+    position: relative;
 }
 
 #footer img {
@@ -1267,6 +1483,7 @@ img {
 
 #footer h3 {
     color: #E7E4DB;
+    opacity: 0.75;
 }
 
 #footer li {
@@ -1303,6 +1520,100 @@ img {
 #footer .faq {
     margin-top: -150px;
     /* border: solid 3px rgb(200, 134, 134);  */
+}
+
+#footer .blank {
+    background-color: #3C4935;
+    /* background-color: red; */
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+}
+/* RWD桌機 */
+@media (min-width:992px) {
+    #footer .blank{
+        display: none;
+    }
+}
+/* RED手機 */
+@media (max-width:576px) {
+    #footer {
+        width: 68%;
+        height: 30vh;
+        overflow: hidden;
+    }
+
+    .footer_nav img {
+        width: 10%;
+        height: 50px;
+        margin: -50px 0 0 310px;
+    }
+
+    #footer .copyright {
+        margin-left: -5px;
+    }
+
+    .footer_nav {
+        margin: 40px 0 0 -355px;
+    }
+
+    #footer .eng {
+        font-size: 1.2rem;
+        margin-bottom: -10px;
+    }
+
+    .footer_nav .addr {
+        width: 11em;
+        font-size: 0.75rem;
+        line-height: 1.5em;
+        margin-bottom: -150px;
+        letter-spacing: 0.2em;
+    }
+
+    #footer h3 .time {
+        margin: 20px 0 0 -85px;
+    }
+
+    #footer h3 .time h3 {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+    }
+
+    #footer .icon_soc {
+        width: 300px;
+        margin: -280px 0 0 -200px;
+    }
+
+    #footer .contact {
+        margin: 30px 0 0 -205px;
+    }
+
+    #footer .contact h3 {
+        font-size: 0.75rem;
+        line-height: 5em;
+        letter-spacing: 0.1em;
+    }
+
+    #footer .faq {
+        margin: -125px 0 0 -560px;
+    }
+
+    #footer .faq h3 {
+        font-size: 0.75rem;
+        line-height: 5em;
+        letter-spacing: 0.1em;
+    }
+
+    #footer .blank {
+        background-color: #3C4935;
+        width: 100px;
+        height: 55px;
+        position: absolute;
+        left: 50px;
+        top: 0px;
+    }
 }
 
 /*----------------- signup0課程報名----------------- */
