@@ -3593,3 +3593,26 @@ p {
     font-size: 0.875rem;
     font-weight: 500;
 }
+
+/*分頁 about區 */
+#about{
+    height: 50vh;
+    text-align: center;
+    line-height: 50vh;
+    display: block;
+    background-color: #D8D8D8;
+}
+#about h3{
+    color: #3C4935;
+}
+/*分頁 course1區 */
+#course1{
+    height: 50vh;
+    text-align: center;
+    line-height: 50vh;
+    display: block;
+    background-color: #D8D8D8;
+}
+#course1 h3{
+    color: #3C4935;
+}
