@@ -38,3 +38,11 @@ $(".add1").click(
   }
 );
 
+ // topbar綠色的淡出淡入
+ $(window).scroll(function () {
+  if ($(this).scrollTop() > 720) {
+    $('#topbarg').stop().fadeTo('', 1);
+  } else {
+    $('#topbarg').stop().fadeOut();
+  }
+});

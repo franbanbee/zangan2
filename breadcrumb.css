@@ -9,14 +9,18 @@ body{
     /* background-color: #000; */
 }
 
-/* 整列麵包屑 */
-.wrap,
-#media_page .wrap{
-    margin: 20px 17px;
+/* 整列麵包屑news_page 新聞分頁 */
+.wrap{
+    /* margin: 20px -10px; */
+    margin: 2vh 1%;
     /* border: solid 3px red; */
     /* padding: 10px 0; */
     /* background-color: #3c6382; */
     /* box-shadow: 0px 5px 5px rgba(51, 84, 110, 0.6) */
+}
+/* 整列麵包屑media_page 文章分頁 */
+#media_page .wrap{
+    margin: 2vh 1%;
 }
 
 .breadcrumb,
