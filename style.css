@@ -248,6 +248,7 @@ img {
     left: 0;
     z-index: 9999;
 }
+
 #topbarg {
     display: none;
     display: flex;
@@ -334,11 +335,12 @@ img {
     /* margin-left: -90px; */
     /* border: solid 3px red;  */
 }
+
 #topbarg h3 {
     color: #fff;
 }
 
-#topbarg .logo img{
+#topbarg .logo img {
     display: block;
     margin-right: 30px;
     /* margin-left: -90px; */
@@ -398,6 +400,7 @@ img {
         z-index: -1;
     }
 }
+
 /* RED手機 */
 @media (max-width:576px) {
     #topbarg {
@@ -430,46 +433,48 @@ img {
 
 /* topbarm */
 #topbarm {
-	position: fixed;
-	/* position會將寬度轉換為內容等寬 */
-	top: 0;
-	left: 0;
-	z-index: 999;
-	
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	
-	/* width: 100%; */
-	
-	/* padding: 20px; */
-	background-color: #3C4935;
-	list-style: none;
+    position: fixed;
+    /* position會將寬度轉換為內容等寬 */
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* width: 100%; */
+
+    /* padding: 20px; */
+    background-color: #3C4935;
+    list-style: none;
     width: 390px;
     height: 70px;
     margin-bottom: 25vh;
 }
 
 #topbarm .logo {
-	width: 82px;
+    width: 82px;
     margin: 0 5%;
 }
 
 #topbarm ul {
-	display: flex;
-	justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#topbarm .icon_signup img{
+#topbarm .icon_signup img {
     margin-left: 1.2rem;
 }
-#topbarm  h3{
+
+#topbarm h3 {
     width: 5rem;
     color: #fff;
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.285em;
 }
+
 #topbarm .icon_signup {
     display: flex;
     justify-content: center;
@@ -514,28 +519,28 @@ img {
 } */
 
 #topbarm .menu {
-	padding: 10px 15px;
-	margin-top: 15px;
-	border-radius: 50px;
-	/* 玻璃擬態(毛玻璃)效果 */
-	background-color: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(5px);
-	/* 必須搭配背景半透明 */
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	/* 修改input邊框的預設樣式 */
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
-	width: 300px;
-	height: 100vh;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 50px;
+    /* 玻璃擬態(毛玻璃)效果 */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    /* 必須搭配背景半透明 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* 修改input邊框的預設樣式 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+    width: 300px;
+    height: 100vh;
 }
 
 #topbarm .menu a {
-	/* display: block; */
-	/* text-decoration: none; */
-	/* 取消<a>預設底線 */
-	/* color: black; */
-	/* 修改瀏覽器預設的<a>字色 */
-	/* padding: 5px 10px; */
-	/* text-align: center; */
+    /* display: block; */
+    /* text-decoration: none; */
+    /* 取消<a>預設底線 */
+    /* color: black; */
+    /* 修改瀏覽器預設的<a>字色 */
+    /* padding: 5px 10px; */
+    /* text-align: center; */
 }
 
 /* .menu li::after {
@@ -547,160 +552,179 @@ img {
 } */
 
 #topbarm .menu li:hover::after {
-	/* width: 100%;
+    /* width: 100%;
 	transition: .35s; */
-	/* 轉場效果 */
+    /* 轉場效果 */
 }
-#topbarm .menu img{
+
+#topbarm .menu img {
     width: 20px;
     height: 20px;
 }
-#topbarm a{
-	text-decoration: none;
+
+#topbarm a {
+    text-decoration: none;
 }
-#topbarm .icon_logi{
-	margin: 0 auto;
+
+#topbarm .icon_logi {
+    margin: 0 auto;
 }
-#topbarm .icon_login img{
-	margin-right: 10%;
+
+#topbarm .icon_login img {
+    margin-right: 10%;
 }
 
 
 /* RWD平板+桌機 */
-@media (min-width:577px){
-	#topbarm{
+@media (min-width:577px) {
+    #topbarm {
         display: none;
     }
-	#topbarm .hamburger {
-		display: none;
-	}
+
+    #topbarm .hamburger {
+        display: none;
+    }
 }
+
 /* RWD手機 */
 @media (max-width:576px) {
-	#topbarm ul {
-		justify-content: center;
-	}
-	/* 漢堡按鈕  */
-	#topbarm .nav_box {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-	}
+    #topbarm ul {
+        justify-content: center;
+    }
 
-	#topbarm .hamburger {
-		display: inline-block;/* 自動抓內容(.bar)的尺寸 */
-		cursor: pointer;
-		/* 取消button預設樣式 */
-		background-color: transparent;
-		border: none;
-		padding: 0;
-	}
+    /* 漢堡按鈕  */
+    #topbarm .nav_box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
-	#topbarm .bar {
-		display: block;/* 修改span行內元素為區塊 */
-		width: 25px;
-		height: 3px;
-		margin: 5px auto;
-		background-color: #fff;
-		transition: all 0.3s ease-in-out;
-	}
+    #topbarm .hamburger {
+        display: inline-block;
+        /* 自動抓內容(.bar)的尺寸 */
+        cursor: pointer;
+        /* 取消button預設樣式 */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(2) {
-		opacity: 0;
-	}
+    #topbarm .bar {
+        display: block;
+        /* 修改span行內元素為區塊 */
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
+    #topbarm .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
-	#topbarm .navigation {
-		display: none;
-		position: absolute;
-		top: 50px;
-		left: -20px;
-		padding: 20px;
-		border-radius: 5px;
-		width: 390px;
+    #topbarm .hamburger.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-		/* 玻璃擬態(毛玻璃)效果 */
-		/* background-color: rgba(255, 255, 255, 0.2); */
-		background-color: rgba(60,73,53, 0.85);
-		backdrop-filter: blur(5px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
-		
-		animation: navigation 0.35s both;
-	}
-	#topbarm .navigation li{
+    #topbarm .hamburger.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #topbarm .navigation {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: -20px;
+        padding: 20px;
+        border-radius: 5px;
+        width: 390px;
+
+        /* 玻璃擬態(毛玻璃)效果 */
+        /* background-color: rgba(255, 255, 255, 0.2); */
+        background-color: rgba(60, 73, 53, 0.85);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+
+        animation: navigation 0.35s both;
+    }
+
+    #topbarm .navigation li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
     }
-    #topbarm .icon_signup{
+
+    #topbarm .icon_signup {
         margin: 0 auto;
     }
-    #topbarm .icon_login{
+
+    #topbarm .icon_login {
         display: flex;
         justify-content: center;
         align-items: center;
-		margin: 0 auto;
+        margin: 0 auto;
     }
 
-	@keyframes navigation {
-		from {
-			opacity: 1;
-		}
+    @keyframes navigation {
+        from {
+            opacity: 1;
+        }
 
-		to {
-			opacity: 0;
-		}
-	}
+        to {
+            opacity: 0;
+        }
+    }
 
-	#topbarm .navigation.show {
-		display: block;
-		animation: show 0.35s both;
-	}
+    #topbarm .navigation.show {
+        display: block;
+        animation: show 0.35s both;
+    }
 
-	@keyframes show {
-		from {
-			opacity: 0;
-		}
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
 
-		to {
-			opacity: 1;
-		}
-	}
-	#topbarm .menu {
-		flex-direction: column;
-		/* 取消玻璃擬態效果 */
-		background-color: transparent;
-		backdrop-filter: none;
-		border: none;
-		box-shadow: none;
-		/* margin-left: 5%; */
-		margin-top: -5vh;
-	}
-	#topbarm .menu li{
-		width: 200px;
-		margin-left: 20%;
-	}
-	#topbarm .menu img{
-		width: 20px;
-		height: 20px;
-	}
-	#topbarm .menu a {
-		padding: 15px 10px;
-	}
-	/* .icon a {
+        to {
+            opacity: 1;
+        }
+    }
+
+    #topbarm .menu {
+        flex-direction: column;
+        /* 取消玻璃擬態效果 */
+        background-color: transparent;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        /* margin-left: 5%; */
+        margin-top: -5vh;
+    }
+
+    #topbarm .menu li {
+        width: 200px;
+        margin-left: 20%;
+    }
+
+    #topbarm .menu img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #topbarm .menu a {
+        padding: 15px 10px;
+    }
+
+    /* .icon a {
 		margin: 0 3px;
 	} */
 }
+
 /* 2.banner */
 #banner {
     height: 100vh;
@@ -1869,7 +1893,8 @@ img {
     #media .span h3 {
         margin: 50px 100px 0 0;
     }
-    #media .nav{
+
+    #media .nav {
         margin-bottom: 10vh;
     }
 
@@ -1890,6 +1915,7 @@ img {
     #media .item3 {
         margin-bottom: -10vh;
     }
+
     #media .item4,
     #media .item5,
     #media .item6 {
@@ -2138,14 +2164,23 @@ img {
 /*----------------- signup0課程報名----------------- */
 /* signup0共用區 */
 /* 字的顏色 */
-#signup0 h1,
 #signup0 h2,
 #signup0 h3 {
     color: #3C4935;
 }
+#signup0 h1{
+    color: #3C4935;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 2.215rem;
+}
 
 #signup0 h3 {
     font-family: 'Unna', serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.12em;
     /* border: solid 5px pink; */
 }
 
@@ -2153,10 +2188,11 @@ img {
     color: #797474;
     /* font-size: 14px; */
     font-size: 0.875rem;
+    line-height: 1.5rem;
     /* border: solid 5px salmon; */
 }
 
-/* signup0課程報名 */
+/* signup0 課程報名 */
 #signup0 {
     /* width: 100%; */
     height: 100vh;
@@ -2337,6 +2373,73 @@ img {
 #signup0 .list2 h2 {
     width: 250px;
 }
+/* RWD手機 signup */
+@media (max-width:576px) {
+    #signup0 {
+        position: relative;
+        height: 100vh;
+    }
+    #signup0 nav{
+        width: 100%;
+        margin: 10vh auto;
+        text-align: center;
+    }
+    #signup0 nav h4{
+        width: 89%;
+        font-size: 0.7em;
+    }
+    #signup0 .block11{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15vh auto;
+        width: 60%;
+    }
+    #signup0 .box1 hr{
+        width: 185px;
+        height: 6px;
+        margin-left: 17%;
+        padding: 0;
+    }
+    #ccourse,
+    #name{
+        width: 332px;
+        height: 50px;
+        margin: 3vh auto;
+    }
+    #signup0 .item{
+        margin: 0 auto;
+    }
+    #signup0 .list{
+        margin-right: 3%;
+    }
+    #signup0 .arrow_w{
+        width: 12.3%;
+        height: 5.7vh;
+    }
+    #signup0 .item .box11{
+        margin-left: -35%;
+    }
+    #signup0 .vline{
+        display: none;
+    }
+    #signup0 .list2{
+        width: 180%;
+        margin: 0 10% 0 -65% ;
+    }
+    #signup0 .list2 h2{
+        width: 100%;
+        margin-left: -30%;
+
+    }
+    #signup0 .list2 img{
+        margin-right: 10%;
+    }
+    #signup0 .box1 h4{
+        margin-left: 8%;
+    }
+}
 
 /* signup0 suc區 報名成功區 */
 
@@ -2409,6 +2512,9 @@ img {
 #signup0 .list3 h3 {
     margin-right: 10px;
     width: 300px;
+    line-height: 24px;
+    letter-spacing: 0.12em;
+    font-weight: 500;
     /* border: solid 1px red; */
 }
 
@@ -2578,6 +2684,9 @@ img {
 #signup0 .list3 h2 {
     margin-left: 30px;
     width: 150px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    line-height: 23px;
     /* border: solid 1px red; */
 }
 
@@ -2585,6 +2694,8 @@ img {
 #signup0 .list3 h3 {
     margin-right: 10px;
     width: 300px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     /* border: solid 1px red; */
 }
 
@@ -2664,6 +2775,139 @@ img {
     height: 20px;
 }
 
+/* RWD手機 signup suc */
+@media (max-width:576px) {
+    #signup0 {
+        position: relative;
+        height: 120vh;
+    }
+    #signup0 nav{
+        width: 100%;
+        margin: 10vh auto;
+        text-align: center;
+    }
+    #signup0 nav h4{
+        /* width: 89%; */
+        /* font-size: 0.7em; */
+    }
+    #signup0 .block1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 25vh auto;
+        width: 60%;
+    }
+    #signup0 .box1 hr{
+        /* width: 185px; */
+        /* height: 6px; */
+        /* margin-left: 17%; */
+        /* padding: 0; */
+    }
+    #ccourse,
+    #name{
+        /* width: 332px; */
+        /* height: 50px; */
+        /* margin: 3vh auto; */
+    }
+    #signup0 .item{
+        /* margin: 0 auto; */
+    }
+    #signup0 .list{
+        /* margin-right: 3%; */
+    }
+    #signup0 .arrow_w{
+        /* width: 12.3%; */
+        /* height: 5.7vh; */
+    }
+    #signup0 .item .box11{
+        /* margin-left: -35%; */
+    }
+    #signup0 .vline{
+        /* display: none; */
+    }
+    #signup0 .list2{
+        width: 180%;
+        margin: 0 10% 0 -65% ;
+    }
+    #signup0 .list2 h2{
+        /* width: 100%; */
+        /* margin-left: -30%; */
+    }
+    #signup0 .list2 img{
+        /* margin-right: 10%; */
+    }
+    #signup0 .box1 h4{
+        margin-left: 10%;
+    }
+    /* suc區 */
+    #signup0 .nav9{
+        margin: 2vh 0 0 -25%;
+        /* margin-left: 70%; */
+    }
+    #signup0 .block9{
+        margin-top: 15vh;
+        /* margin-bottom: 30vh; */
+    }
+    #signup0 .nav9 .item{
+        margin-left: 6.5%;
+    }
+    #signup0 .list3{
+        width: 334px;
+        height: 139px;
+        line-height: 1rem;
+        margin-top:0.875rem ;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #signup0 .box2{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #signup0 .list3 h2{
+        margin-left: -45%;
+        margin-top: 22px;
+        margin-top: 4vh;
+    }
+    #signup0 .list3 .box2{
+        margin-top: 3vh;
+    }
+    #signup0 .box2 hr{
+        margin:  0 0 -4vh 0;
+        /* margin-top: 20vh; */
+    }
+    #signup0 .list3 .fri{
+        margin: 0 0 3vh 0.5%;
+        line-height: 24px;
+    }
+    #signup0 .block2 h3{
+        /* width: 77px; */
+        /* height: 19px; */
+        width: 15%;
+        height: 2.5vh;
+        padding-right: 5%;
+    }
+    #signup0 .block2 h1{
+        margin: 4vh 0 0 -50% ;
+    }
+    #signup0 .block2 h2{
+        margin-top: 1vh;
+        margin-left: -52%;
+    }
+    #signup0 .block2 .noon{
+        width: 83%;
+        margin-bottom:2vh ;
+    }
+    #signup0 .box9 div{
+        margin: -4vh 0 4vh 0;
+    }
+    #signup0 button{
+        width: 335px;
+        height: 40px;
+    }
+}
 
 /* ------cart 購物車區------ */
 #cart {
@@ -2683,7 +2927,14 @@ img {
 }
 
 #cart h3 {
-    margin-bottom: 10px;
+    line-height: 24px;
+    /* margin-bottom: 10px; */
+}
+#cart h1{
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 24px;
+    color: #3C4935
 }
 
 /* 資料核對區 */
@@ -2733,6 +2984,7 @@ img {
     color: #797474;
     /* letter-spacing: 2px; */
     letter-spacing: 0.125rem;
+    line-height: 21px;
     /* border: solid 5px salmon; */
 }
 
@@ -2770,9 +3022,11 @@ img {
 #cart .course_c {
     margin-left: 50px;
 }
-#cart .bar{
+
+#cart .bar {
     margin-left: 1%;
 }
+
 /*cart: Course Price Quantity Subtotal 單一個 */
 #cart .bar h3 {
     margin-right: 90px;
@@ -2788,11 +3042,12 @@ img {
 #cart .hrb {
     /* width: 1000px; */
     width: 91%;
-    margin-left:4.5% ;
+    margin-left: 4.5%;
     border-color: #797474;
     /* border: solid 2px red; */
 }
-#cart .hrb1{
+
+#cart .hrb1 {
     margin-left: 5%;
 }
 
@@ -2931,17 +3186,18 @@ img {
 #cart .act h3 {
     background-color: #9B8256;
     color: #fff;
-    /* width: 62px;
-    height: 10px; */
-    width: 60%;
-    height: 4vh;
+    /* width: 77px; */
+    /* height: 19px; */
+    width: 45%;
+    height: 2.1vh;
     border-radius: 0 3px 3px 0;
     text-align: end;
-    line-height: 4vh;
+    line-height: 19px;
     /* line-height: 10px; */
     padding-right: 15px;
     margin-left: 0.1px;
-    margin-top: -20px;
+    margin-top: -5vh;
+    /* padding:1vh 0 ; */
 }
 
 /* 4/13+下午14:00-16:00，共1堂 */
@@ -2992,6 +3248,7 @@ img {
 #cart .total hr {
     width: 350px;
     height: 0;
+    background-color: #797474;
     /* text-align: end; */
 }
 
@@ -3042,7 +3299,136 @@ img {
     font-weight: 400;
     /* border: solid 3px red; */
 }
-
+#cart .mini{
+    width: 15px;
+    border-color: #797474;
+}
+/* RWD桌機 */
+@media (min-width:992px){
+    #cart .small1,
+    #cart .small2{
+        display: none;
+    }
+}
+/* RWD手機 */
+@media (max-width:576px) {
+    #cart{
+    }
+    #cart .nav{
+        margin-top: 15vh;
+    }
+    #cart nav{
+        /* width: 100%; */
+        width: 390px;
+        /* height: 20vh; */
+        height: 221px;
+        margin-top: -8vh;
+        margin-left: -18%;
+        /* padding: 0 5% ; */
+        /* margin: 0 auto; */
+    }
+    #cart .deta{
+        margin-top: 5vh;
+        margin-left: 6%;
+    }
+    #cart .deta h3{
+        width: 70%;
+    }
+    #cart .course_c{
+        margin-left: -7%;
+    }
+    #cart .bar .price,
+    #cart .bar .no,
+    #cart .money,
+    #cart .noon{
+        display: none;
+    }
+    #cart .hrb{
+        margin-left: -7%;
+        width: 333px;
+        /* margin-bottom: 158.5px; */
+    }
+    #cart .tea{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        /* align-items: center; */
+        margin-left: 12%;
+        margin-bottom: 10vh;
+    }
+    #cart .tea h2{
+        line-height: 23px;
+        margin-left: -62%;
+        margin-bottom: 8vh;
+    }
+    #cart .friday{
+        width: 120%;
+    }
+    #cart .box{
+        margin: -12vh 0 0 -70%;
+    }
+    #cart .subtotal{
+        margin: -4vh 0 0 90%;
+    }
+    #cart .mini{
+        margin: -7vh 0 0 115%;
+    }
+    #cart .small1{
+        margin: 0 0 -1.5vh -135%;
+    }
+    #cart .small2{
+        margin: 0 0 -1.5vh -135%;
+    }
+    #cart .act h3{
+        /* width: 68px; */
+        /* height: 19px; */
+        width: 40%;
+        height: 2.2vh;
+        margin: -2vh 0 0 -45%;
+    }
+    #cart .act h1{
+        margin: 1vh 0 0 -45%;
+    }
+    #cart .act h2{
+        width: 100%;
+        margin-left: -46%;
+        /* margin: 0.5vh 0 0 10%; */
+    }
+    #cart .sub9{
+        margin: -6vh 0 0 -70%;
+    }
+    #cart .sub99{
+        margin: -4vh 0 0 90%;
+    }
+    #cart .mini9{
+        margin: -15vh 0 0 115%;
+    }
+    #cart .total hr{
+        width: 276px;
+        margin: 0 0 0 -100%;
+        border-color: #797474;
+    }
+    #cart .total_money{
+        height: 10vh;
+        margin: 0;
+        margin-left: -20%;
+    }
+    #cart .total_money h2{
+        width: 6rem;
+        margin: 0;
+        padding: 0;
+    }
+    #cart .sent{
+        width: 276px;
+        height: 40px;
+        margin-top: -4vh;
+        margin-left: 15%;
+    }
+    #cart .more{
+        margin-top: 3vh;
+        margin-left: -8%;
+    }
+}
 
 /* reserve 預約成功區 */
 #reserve {}
@@ -3086,6 +3472,10 @@ img {
 
 #reserve .deta h1,
 #reserve .deta h4 {
+    color: #3C4935;
+}
+#reserve .nav h1{
+    font-weight: 600;
     color: #3C4935;
 }
 
@@ -3287,7 +3677,55 @@ img {
     margin: 0 auto;
     /* border: solid 5px salmon; */
 }
+/* RWD手機 */
+@media (max-width:576px) {
+    #reserve{
 
+    }
+    #reserve .nav{
+        margin: 12vh 0 0 0;
+    }
+    #reserve nav{
+        margin: 5vh 0 0 -75%;
+    }
+    #infoModal .circle{
+        /* margin-left: -15%; */
+        margin-left: -18%;
+    }
+    #infoModal{
+        width: 88%;
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+    #reserve{
+
+    }
+}
 /* ---最新消息單獨分頁news_content--- */
 #news_content {
     height: 100vh;
@@ -3453,6 +3891,7 @@ img {
 #news .arrow img:hover {
     background-image: url(img/index/index-news/arrow\(黑\).svg);
 }
+
 /* RED手機 */
 @media (max-width:576px) {
     #news_content {
@@ -3462,44 +3901,52 @@ img {
         height: 80vh;
         /* margin-top: 200px; */
     }
-    #news_content section{
+
+    #news_content section {
         /* margin-right:10% ; */
     }
-    #news_content .title{
+
+    #news_content .title {
         /* margin: 0 0 0 10%; */
     }
-    #news_content ul{
+
+    #news_content ul {
         width: 80%;
         margin: 0 auto;
     }
-    #news_content li{
+
+    #news_content li {
         padding: 0 0 0 3%;
     }
-    #news_content li a{
+
+    #news_content li a {
         width: 100px;
         height: 30px;
         /* margin: 0 1%; */
         /* margin: 0 80px; */
         padding: 0;
     }
-    #news_content li a:hover{
+
+    #news_content li a:hover {
         width: 100px;
         height: 30px;
         /* margin: 0 13%; */
         /* margin: 0 80px; */
         padding: 0;
     }
-    #news_content .pho{
+
+    #news_content .pho {
         margin-top: -10vh;
         /* margin-bottom: -20vh; */
     }
+
     #news_content .pho img {
         /* width: 265px; */
         /* height: 250px; */
         width: 390px;
         /* width: 100%; */
         height: 250px;
-        margin:35vh 0 0 -11%;
+        margin: 35vh 0 0 -11%;
         object-fit: cover;
     }
 
@@ -3524,12 +3971,15 @@ img {
         width: 20em;
         margin: 2vh 0 -2vh -12%;
     }
-    #news_content .text{
+
+    #news_content .text {
         /* margin: 3vh 0; */
     }
-    #news_content .text h2{
+
+    #news_content .text h2 {
         width: 130%;
     }
+
     #news_content .more {
         margin: 10px 40px 0 0;
     }
@@ -3704,41 +4154,51 @@ img {
     margin-right: 10px;
     /* border: solid 5px red; */
 }
+
 /* RED手機 */
 @media (max-width:576px) {
-    #news_page{
+    #news_page {
         margin-top: 8vh;
         margin-left: -90%;
     }
-    #news_page .wrap{
+
+    #news_page .wrap {
         display: none;
     }
-    #news_page .date{
+
+    #news_page .date {
         margin: 2vh 0 0 50%;
     }
-    #news_page .news_page_section{
+
+    #news_page .news_page_section {
         margin: 10vh 0 0 -5.5%;
     }
-    #news_page .news_page_title h1{
+
+    #news_page .news_page_title h1 {
         font-size: 1rem;
     }
-    #news_page .news_page_img img{
+
+    #news_page .news_page_img img {
         width: 334px;
         height: 113px;
     }
-    #news_page .news_page_text{
+
+    #news_page .news_page_text {
         /* width: 332px; */
         width: 58%;
         /* height: 359px; */
     }
-    #news_page .news_page_text p{
+
+    #news_page .news_page_text p {
         line-height: 1.5rem;
     }
-    #news_page .next{
+
+    #news_page .next {
         /* width: 50%; */
         /* margin-left: 5%; */
     }
-    #news_page .news_page_box{
+
+    #news_page .news_page_box {
         width: 40%;
         margin: 18vh 0 2vh 45%;
         /* margin:0 0 0 -10%; */
@@ -3911,61 +4371,73 @@ p {
     line-height: 1.2rem;
     /* border: solid 3px red; */
 }
+
 /* RED手機 */
 @media (max-width:576px) {
-    #media_area{
+    #media_area {
         position: relative;
     }
-    #media_area .title{
+
+    #media_area .title {
         margin-top: 5vh;
     }
-    #media_area .title ul{
+
+    #media_area .title ul {
         /* width: 350px; */
         /* height: 50px; */
         width: 80%;
         margin: 0 auto;
     }
-    #media_area .title li{
+
+    #media_area .title li {
         padding: 0 0 0 3%;
         margin: 0 1%;
     }
-    #media_area .title li a{
+
+    #media_area .title li a {
         width: 100px;
         height: 30px;
         padding: 0;
     }
-    #media_area .item4{
+
+    #media_area .item4 {
         /* display: none; */
         position: absolute;
         left: 5px;
         top: 200px;
     }
-    
-    #media_area .item5{
+
+    #media_area .item5 {
         position: absolute;
         left: 125px;
         top: 200px;
     }
-    #media_area .list_item{
+
+    #media_area .list_item {
         width: 334px;
-        height: 365px;   
+        height: 365px;
     }
-    #media_area .list_item img{
+
+    #media_area .list_item img {
         margin: 0 0 0 -5%;
         width: 334px;
         height: 160px;
     }
-    #media_area .list_box{
+
+    #media_area .list_box {
         width: 100%;
         margin: -5vh 0 10vh -105%;
     }
-    #media_area .list_box h2{
+
+    #media_area .list_box h2 {
         margin-bottom: 20vh;
     }
-    #media_area .more{
+
+    #media_area .more {
         margin-left: -0.5%;
     }
-    #media_area .more img{
+
+    #media_area .more img {
         /* width: 83.5em; */
         /* height: 8px; */
         height: 1vh;
@@ -4048,7 +4520,7 @@ p {
 }
 
 /* 文字內容 */
-.media_page_text{
+.media_page_text {
     /* font-size: 16px; */
     font-size: 1rem;
     font-weight: 500;
@@ -4176,7 +4648,7 @@ p {
     line-height: 1.438rem;
     font-size: 1rem;
     font-weight: 500;
-    
+
 }
 
 #media_page hr {
@@ -4185,6 +4657,7 @@ p {
     margin: 9vh 0 0 -25%;
     border-color: #1E1E1E;
 }
+
 /* 手作已經... */
 #media_page .text_block h3 {
     margin: -40px 0 -60px;
@@ -4195,70 +4668,84 @@ p {
     line-height: 23px;
     /* border: solid 1px red; */
 }
+
 /* RED手機 */
 @media (max-width:576px) {
-    #media_page{
+    #media_page {
         /* height: 150vh; */
         margin-top: 8vh;
         /* margin-left: -90%; */
         position: relative;
     }
-    #media_page .all_section{
+
+    #media_page .all_section {
         margin-bottom: 80vh;
     }
-    #media_page .wrap{
+
+    #media_page .wrap {
         display: none;
     }
-    #media_page .media_page_section{
+
+    #media_page .media_page_section {
         margin: 10vh 0 0 -5.5%;
     }
-    #media_page .date{
+
+    #media_page .date {
         margin: 0 0 0 35%;
     }
-    #media_page .media_page_img img{
+
+    #media_page .media_page_img img {
         width: 331px;
         height: 200px;
         object-fit: fill;
         margin-top: 6vh;
     }
-    #media_page .media_page_title{
+
+    #media_page .media_page_title {
         width: 334px;
         height: 21px;
     }
-    #media_page .media_page_title img{
+
+    #media_page .media_page_title img {
         position: absolute;
         width: 64px;
         height: 28px;
         /* left: 50px; */
         top: 120px;
     }
-    #media_page .media_page_title h1{
+
+    #media_page .media_page_title h1 {
         font-size: 1rem;
     }
-    #media_page hr{
+
+    #media_page hr {
         width: 333px;
-        margin-left:0.5% ;
+        margin-left: 0.5%;
         margin-top: 15vh;
     }
-    #media_page .media_page_text{
+
+    #media_page .media_page_text {
         width: 82%;
         margin-left: -0.5%;
     }
-    #media_page .text_block h3{
+
+    #media_page .text_block h3 {
         width: 55%;
         letter-spacing: 0.12em;
         font-size: 0.875rem;
         font-weight: 500;
         line-height: 1.5rem;
     }
-    #media_page .media_page_text li{
+
+    #media_page .media_page_text li {
         width: 55%;
         letter-spacing: 0.12em;
         font-size: 0.875rem;
         font-weight: 500;
         line-height: 1.5rem;
     }
-    #media_page .more{
+
+    #media_page .more {
         margin-top: 3vh;
     }
 }
@@ -4389,34 +4876,40 @@ p {
     font-size: 0.875rem;
     font-weight: 500;
 }
+
 /* RED手機 */
 @media (max-width:576px) {
-    #media_content{
+    #media_content {
         margin-top: -7vh;
         margin-left: 17%;
     }
-    #media_content .nav{
+
+    #media_content .nav {
         margin-left: -22%;
     }
+
     #media_content .item4,
     #media_content .item5,
-    #media_content .item6{
-       display: none;
+    #media_content .item6 {
+        display: none;
     }
+
     #media_content .main {
         margin: 0 0 0 30px;
         display: flex;
         flex-direction: column;
         width: 60%;
     }
-    #media_content h2{
+
+    #media_content h2 {
         letter-spacing: 0.12em;
         line-height: 24px;
         font-weight: 700;
         font-size: 1rem;
         width: 334px;
     }
-    #media_content .img img{
+
+    #media_content .img img {
         width: 334px;
         height: 160px;
     }
@@ -4449,6 +4942,7 @@ p {
 #course1 h3 {
     color: #3C4935;
 }
+
 /*分頁 login1區 */
 #login1 {
     height: 100vh;
