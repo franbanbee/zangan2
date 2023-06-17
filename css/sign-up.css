@@ -1,0 +1,380 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Microsoft JhengHei;
+}
+
+
+
+
+
+/* css開始 */
+
+
+/* 登入頁共同設定 */
+.container {
+	overflow: hidden;
+	/* 清除浮動 */
+}
+
+.left-side {
+	float: left;
+	width: 56%;
+	/* 右側佔 44% 的寬度 */
+}
+
+.right-side {
+	float: right;
+	width: 44%;
+	/* 左側佔 56% 的寬度 */
+	height: 100vh;
+	/* 框架的高度 */
+	position: relative;
+	display: flex;
+}
+
+
+
+/* 輸入框 */
+
+/* logo區 */
+.left-side .logo {
+	background-color: #f0f0f058;
+}
+
+.left-side .logo img {
+	margin: 0 auto;
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.left-side .logo h1 {
+	color: #1B1B1B;
+	text-align: center;
+	margin: 20px 0px 15px 0px;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+	font-family: 'Noto Serif TC', serif;
+}
+
+.left-side .logo p {
+	color: #5C5C5C;
+	text-align: center;
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	padding-bottom: 20px;
+	font-family: 'Noto Serif TC', serif;
+}
+
+/* 右邊輸入區 */
+#member_modification_form {
+	width: 45%;
+	margin: 30px auto 10px;
+	font-family: 'Noto Serif TC', serif;
+}
+
+#member_modification_form>* {
+	display: block;
+	width: 100%;
+}
+
+#member_modification_form label {
+	margin: 20px 0 10px 0;
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	color: #1D201D;
+	font-family: 'Noto Serif TC', serif;
+}
+
+#member_modification_form input {
+	padding: 10px;
+	font-size: 0.8rem;
+	letter-spacing: 0.05rem;
+	color: #1D201D;
+	border-radius: 2px;
+	background-color: #f0f0f084;
+	border: none;
+	font-family: 'Noto Serif TC', serif;
+}
+
+::placeholder {
+	color: #c0c0c0;
+
+}
+
+#member_modification_form button {
+	border-radius: 30px;
+	padding: 8px;
+	margin-top: 20px;
+	background-color:#3c493590;
+	color: white;
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing: 0.1rem;
+	border: none;
+}
+
+#submit-button:hover{
+	background-color:#3C4935;
+	color: white;
+}
+
+
+.left-side a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+	color: #1D201D;
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing: 0.1rem;
+	font-size: 0.8rem;
+
+}
+
+.left-side .line-text-line {
+	display: flex;
+	align-items: center;
+	width: 45%;
+	margin: 20px auto ;
+}
+
+.left-side .line-text-line .line {
+	flex-grow: 1;
+	height: 1px;
+	background-color: #79747454;
+}
+
+.left-side .line-text-line .text {
+	margin: 0 10px;
+	font-size: 0.8rem;
+	font-family: 'Noto Serif TC', serif;
+	color: #797474;
+}
+
+.button-group a.google , .button-group a.fb{
+	border: 1px solid #9b8256c7;
+	background-color: #ffffff;
+	border-radius: 30px;
+	padding: 8px;
+	margin: 15px auto;
+	color: #9B8256;
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing: 0.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45%;
+	text-decoration: none;
+
+}
+.left-side button img{
+padding-right: 2px;
+}
+
+/* 右邊圖片 */
+
+.right-side .img {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.right-side .feedback {
+	position: absolute;
+	z-index: 1;
+	width: 450px;
+	height: 220px;
+	background-color: rgba(255, 255, 255, 0.026);
+	border: 1px solid rgba(255, 255, 255, 0.443);
+	backdrop-filter: blur(20px);
+	/* 背景模糊效果，根據需要調整模糊程度 */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	/* 陰影效果，根據需要調整陰影顏色和大小 */
+	border-radius: 20px;
+	bottom: 0;
+	/* 將物件置於底部 */
+	left: 0;
+	margin: 50px 40px;
+}
+
+.right-side .feedback h1 {
+	color: aliceblue;
+	font-size: 1.2rem;
+	margin: 30px 30px 20px 30px;
+	line-height: 1.9rem;
+	letter-spacing: 0.1rem;
+	font-family: 'Noto Serif TC', serif;
+	font-weight: 400;
+}
+
+.right-side .feedback h2 {
+	color: aliceblue;
+	font-size: 1.1rem;
+	letter-spacing: 0.1rem;
+	margin: 0 30px;
+	font-family: 'Noto Serif TC', serif;
+}
+
+.right-side .feedback h2 .inline-text {
+	color: aliceblue;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+	margin: 5px;
+	display: inline;
+	font-family: 'Noto Serif TC', serif;
+}
+
+.star {
+	width: 166px;
+	height: auto;
+	padding-left: 30px;
+	padding-top: 10px;
+	display: inline-block;
+}
+
+.star img {
+	margin-right: 2px;
+	width: 20px;
+	height: auto;
+}
