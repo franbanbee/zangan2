@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-IN</title>
+    <link rel="stylesheet" href="./css/sign-up.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左邊輸入框 -->
+        <div class="left-side">
+            <div class="logo">
+                <a href="index.html"><img src="img/login/cn-logo.svg" alt="蘵感"></a>
+                <h1>Sign Up</h1>
+                <p>Fill up the form to register.</p>
+            </div>
+
+            <form name="member_modification_form" id="member_modification_form" action="#" method="post">
+
+                <!-- 姓名＿text文字欄位 -->
+                <label for="username">姓名 Name</label>
+                <input type="text" name="username" id="username" placeholder="請輸入您的姓名 Name" autocomplete="on">
+
+                <p></p>
+
+                <!-- 電子信箱＿email信箱欄位 -->
+                <label for="email">信箱 Address</label>
+                <input type="email" name="email" id="email" placeholder="請輸入您的信箱 Address" autocomplete="on">
+
+                <p></p>
+
+                <!-- 密碼＿password密碼欄位 -->
+                <label for="password">密碼 Password</label>
+                <input type="password" name="password" id="password" placeholder="請輸入您的密碼 Password" required>
+
+                <p></p>
+
+                <!-- 單選下拉選單＿核取方塊元素 -->
+                <label for="terms-checkbox">
+                <input type="checkbox" id="terms-checkbox"> 我已閱讀並同意條款</label>
+
+                <button id="submit-button" disabled>確認註冊</button>
+
+            </form>
+
+            <a id="log-in" href="login.html">已有帳戶，點擊這裡登入</a>
+
+            <div class="line-text-line">
+                <div class="line"></div>
+                <div class="text">or</div>
+                <div class="line"></div>
+            </div>
+
+
+            <div class="button-group">
+                <a href="#" class="google">
+                  <img src="img/login/icon-google.svg" alt="google">
+                  <span>Google 快速登入</span>
+                </a>
+                <a href="#" class="fb">
+                  <img src="img/login/icon-fb.svg" alt="fb">
+                  <span>Facebook 快速登入</span>
+                </a>
+              </div>
+        </div>
+
+        <!-- 右邊圖片 -->
+        <div class="right-side">
+            <div class="img"><img src="img/login/pic1.png" alt="pic"></div>
+
+            <div class="feedback">
+                <h1>我很喜歡蘵感的課程和氛圍！<br>
+                    尤其是他們非常注重客人的體驗。我已經推薦給我的朋友和家人了。</h1>
+                <h2>吳小姐
+                    <span class="inline-text">台北市</span>
+                </h2>
+                <div class="star">
+                    <img src="img/login/icon-star.svg" alt="star1">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

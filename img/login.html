@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左邊圖片 -->
+        <div class="right-side">
+            <div class="img"><img src="img/login/pic2.png" alt="pic"></div>
+
+            <div class="feedback">
+                <h1> 我很高興在這裡找到適合課程。<br>
+                    老師非常專業，很有耐心地教導我們每個細節，讓我感到放心。</h1>
+                <h2>莊小姐
+                    <span class="inline-text">新北市</span>
+                </h2>
+                <div class="star">
+                    <img src="img/login/icon-star.svg" alt="star1">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                    <img src="img/login/icon-star.svg" alt="star2">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右邊輸入框 -->
+        <div class="left-side">
+            <div class="logo">
+                <a href="index.html"><img src="img/login/cn-logo.svg" alt="蘵感"></a>
+                <h1>Welcome Back</h1>
+                <p>Login to your account.</p>
+            </div>
+
+            <form name="member_modification_form" id="member_modification_form" action="#" method="post">
+
+                <!-- 電子信箱＿email信箱欄位 -->
+                <label for="email">信箱 Address</label>
+                <input type="email" name="email" id="email" placeholder="請輸入您的信箱 Address" autocomplete="on">
+
+                <p></p>
+
+                <!-- 密碼＿password密碼欄位 -->
+                <label for="password">密碼 Password</label>
+                <input type="password" name="password" id="password" placeholder="請輸入您的密碼 Password" required>
+
+                <p></p>
+
+                <!-- 單選下拉選單＿核取方塊元素 -->
+                <label for="terms-checkbox">
+                    <input type="checkbox" id="terms-checkbox"> 我已閱讀並同意條款</label>
+
+                <button id="submit-button" disabled>確認註冊</button>
+
+            </form>
+
+            <a id="sign-in" href="sign-up.html">還沒有帳戶嗎？點擊這裡註冊</a>
+            <a href="#">忘記密碼</a>
+
+            <div class="line-text-line">
+                <div class="line"></div>
+                <div class="text">or</div>
+                <div class="line"></div>
+            </div>
+
+            <div class="button-group">
+                <a href="#" class="google">
+                    <img src="img/login/icon-google.svg" alt="google">
+                    <span>Google 快速登入</span>
+                </a>
+                <a href="#" class="fb">
+                    <img src="img/login/icon-fb.svg" alt="fb">
+                    <span>Facebook 快速登入</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
