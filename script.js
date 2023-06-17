@@ -38,11 +38,19 @@ $(".add1").click(
   }
 );
 
- // topbar綠色的淡出淡入
- $(window).scroll(function () {
+// topbar綠色的淡出淡入
+$(window).scroll(function () {
   if ($(this).scrollTop() > 720) {
     $('#topbarg').stop().fadeTo('', 1);
   } else {
     $('#topbarg').stop().fadeOut();
   }
+});
+
+//---漢堡按鈕---
+$(function () {
+  $('.hamburger').click(function () {
+    $(this).toggleClass('is-active');
+    $('.navigation').toggleClass('show');
+  });
 });

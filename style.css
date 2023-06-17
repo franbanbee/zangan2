@@ -487,37 +487,6 @@ img {
     margin-right: 60px;
 }
 
-/* .icon a {
-	display: block;
-	width: 35px;
-	height: 35px;
-	margin: 0 5px;
-}
-
-.icon-fb {
-	background-image: url(../images/icon-fb.svg);
-}
-
-.icon-ig {
-	background-image: url(../images/icon-ig.svg);
-}
-
-.icon-line {
-	background-image: url(../images/icon-line.svg);
-}
-
-.icon-fb:hover {
-	background-image: url(../images/icon-fb-hover.svg);
-}
-
-.icon-ig:hover {
-	background-image: url(../images/icon-ig-hover.svg);
-}
-
-.icon-line:hover {
-	background-image: url(../images/icon-line-hover.svg);
-} */
-
 #topbarm .menu {
     padding: 10px 15px;
     margin-top: 15px;
@@ -531,30 +500,6 @@ img {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
     width: 300px;
     height: 100vh;
-}
-
-#topbarm .menu a {
-    /* display: block; */
-    /* text-decoration: none; */
-    /* 取消<a>預設底線 */
-    /* color: black; */
-    /* 修改瀏覽器預設的<a>字色 */
-    /* padding: 5px 10px; */
-    /* text-align: center; */
-}
-
-/* .menu li::after {
-	content: "";
-	display: block;
-	width: 0%;
-	height: 2px;
-	background-color: black;
-} */
-
-#topbarm .menu li:hover::after {
-    /* width: 100%;
-	transition: .35s; */
-    /* 轉場效果 */
 }
 
 #topbarm .menu img {
@@ -635,11 +580,14 @@ img {
     #topbarm .navigation {
         display: none;
         position: absolute;
-        top: 50px;
-        left: -20px;
+        /* top: 50px; */
+        top: 5vh;
+        /* left: -20px; */
+        left: -130%;
         padding: 20px;
         border-radius: 5px;
         width: 390px;
+        /* width: 100%; */
 
         /* 玻璃擬態(毛玻璃)效果 */
         /* background-color: rgba(255, 255, 255, 0.2); */
@@ -667,7 +615,7 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
+        margin: 0 0 0 -10%;
     }
 
     @keyframes navigation {
@@ -708,7 +656,12 @@ img {
 
     #topbarm .menu li {
         width: 200px;
-        margin-left: 20%;
+        margin-left: -70%;
+    }
+    #topbarm .menu li h3{
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.12rem;
     }
 
     #topbarm .menu img {
@@ -719,10 +672,6 @@ img {
     #topbarm .menu a {
         padding: 15px 10px;
     }
-
-    /* .icon a {
-		margin: 0 3px;
-	} */
 }
 
 /* 2.banner */
@@ -2168,7 +2117,8 @@ img {
 #signup0 h3 {
     color: #3C4935;
 }
-#signup0 h1{
+
+#signup0 h1 {
     color: #3C4935;
     font-size: 1.5rem;
     font-weight: 600;
@@ -2373,22 +2323,26 @@ img {
 #signup0 .list2 h2 {
     width: 250px;
 }
+
 /* RWD手機 signup */
 @media (max-width:576px) {
     #signup0 {
         position: relative;
         height: 100vh;
     }
-    #signup0 nav{
+
+    #signup0 nav {
         width: 100%;
         margin: 10vh auto;
         text-align: center;
     }
-    #signup0 nav h4{
+
+    #signup0 nav h4 {
         width: 89%;
         font-size: 0.7em;
     }
-    #signup0 .block11{
+
+    #signup0 .block11 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2396,47 +2350,58 @@ img {
         margin: 15vh auto;
         width: 60%;
     }
-    #signup0 .box1 hr{
+
+    #signup0 .box1 hr {
         width: 185px;
         height: 6px;
         margin-left: 17%;
         padding: 0;
     }
+
     #ccourse,
-    #name{
+    #name {
         width: 332px;
         height: 50px;
         margin: 3vh auto;
     }
-    #signup0 .item{
+
+    #signup0 .item {
         margin: 0 auto;
     }
-    #signup0 .list{
+
+    #signup0 .list {
         margin-right: 3%;
     }
-    #signup0 .arrow_w{
+
+    #signup0 .arrow_w {
         width: 12.3%;
         height: 5.7vh;
     }
-    #signup0 .item .box11{
+
+    #signup0 .item .box11 {
         margin-left: -35%;
     }
-    #signup0 .vline{
+
+    #signup0 .vline {
         display: none;
     }
-    #signup0 .list2{
+
+    #signup0 .list2 {
         width: 180%;
-        margin: 0 10% 0 -65% ;
+        margin: 0 10% 0 -65%;
     }
-    #signup0 .list2 h2{
+
+    #signup0 .list2 h2 {
         width: 100%;
         margin-left: -30%;
 
     }
-    #signup0 .list2 img{
+
+    #signup0 .list2 img {
         margin-right: 10%;
     }
-    #signup0 .box1 h4{
+
+    #signup0 .box1 h4 {
         margin-left: 8%;
     }
 }
@@ -2781,16 +2746,19 @@ img {
         position: relative;
         height: 120vh;
     }
-    #signup0 nav{
+
+    #signup0 nav {
         width: 100%;
         margin: 10vh auto;
         text-align: center;
     }
-    #signup0 nav h4{
+
+    #signup0 nav h4 {
         /* width: 89%; */
         /* font-size: 0.7em; */
     }
-    #signup0 .block1{
+
+    #signup0 .block1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2798,112 +2766,138 @@ img {
         margin: 25vh auto;
         width: 60%;
     }
-    #signup0 .box1 hr{
+
+    #signup0 .box1 hr {
         /* width: 185px; */
         /* height: 6px; */
         /* margin-left: 17%; */
         /* padding: 0; */
     }
+
     #ccourse,
-    #name{
+    #name {
         /* width: 332px; */
         /* height: 50px; */
         /* margin: 3vh auto; */
     }
-    #signup0 .item{
+
+    #signup0 .item {
         /* margin: 0 auto; */
     }
-    #signup0 .list{
+
+    #signup0 .list {
         /* margin-right: 3%; */
     }
-    #signup0 .arrow_w{
+
+    #signup0 .arrow_w {
         /* width: 12.3%; */
         /* height: 5.7vh; */
     }
-    #signup0 .item .box11{
+
+    #signup0 .item .box11 {
         /* margin-left: -35%; */
     }
-    #signup0 .vline{
+
+    #signup0 .vline {
         /* display: none; */
     }
-    #signup0 .list2{
+
+    #signup0 .list2 {
         width: 180%;
-        margin: 0 10% 0 -65% ;
+        margin: 0 10% 0 -65%;
     }
-    #signup0 .list2 h2{
+
+    #signup0 .list2 h2 {
         /* width: 100%; */
         /* margin-left: -30%; */
     }
-    #signup0 .list2 img{
+
+    #signup0 .list2 img {
         /* margin-right: 10%; */
     }
-    #signup0 .box1 h4{
+
+    #signup0 .box1 h4 {
         margin-left: 10%;
     }
+
     /* suc區 */
-    #signup0 .nav9{
+    #signup0 .nav9 {
         margin: 2vh 0 0 -25%;
         /* margin-left: 70%; */
     }
-    #signup0 .block9{
+
+    #signup0 .block9 {
         margin-top: 15vh;
         /* margin-bottom: 30vh; */
     }
-    #signup0 .nav9 .item{
+
+    #signup0 .nav9 .item {
         margin-left: 6.5%;
     }
-    #signup0 .list3{
+
+    #signup0 .list3 {
         width: 334px;
         height: 139px;
         line-height: 1rem;
-        margin-top:0.875rem ;
+        margin-top: 0.875rem;
         display: flex;
         flex-direction: column;
         position: relative;
     }
-    #signup0 .box2{
+
+    #signup0 .box2 {
         position: absolute;
         right: 0;
         top: 0;
     }
-    #signup0 .list3 h2{
+
+    #signup0 .list3 h2 {
         margin-left: -45%;
         margin-top: 22px;
         margin-top: 4vh;
     }
-    #signup0 .list3 .box2{
+
+    #signup0 .list3 .box2 {
         margin-top: 3vh;
     }
-    #signup0 .box2 hr{
-        margin:  0 0 -4vh 0;
+
+    #signup0 .box2 hr {
+        margin: 0 0 -4vh 0;
         /* margin-top: 20vh; */
     }
-    #signup0 .list3 .fri{
+
+    #signup0 .list3 .fri {
         margin: 0 0 3vh 0.5%;
         line-height: 24px;
     }
-    #signup0 .block2 h3{
+
+    #signup0 .block2 h3 {
         /* width: 77px; */
         /* height: 19px; */
         width: 15%;
         height: 2.5vh;
         padding-right: 5%;
     }
-    #signup0 .block2 h1{
-        margin: 4vh 0 0 -50% ;
+
+    #signup0 .block2 h1 {
+        margin: 4vh 0 0 -50%;
     }
-    #signup0 .block2 h2{
+
+    #signup0 .block2 h2 {
         margin-top: 1vh;
         margin-left: -52%;
     }
-    #signup0 .block2 .noon{
+
+    #signup0 .block2 .noon {
         width: 83%;
-        margin-bottom:2vh ;
+        margin-bottom: 2vh;
     }
-    #signup0 .box9 div{
+
+    #signup0 .box9 div {
         margin: -4vh 0 4vh 0;
     }
-    #signup0 button{
+
+    #signup0 button {
         width: 335px;
         height: 40px;
     }
@@ -2930,7 +2924,8 @@ img {
     line-height: 24px;
     /* margin-bottom: 10px; */
 }
-#cart h1{
+
+#cart h1 {
     font-weight: 600;
     letter-spacing: 0.12em;
     line-height: 24px;
@@ -3299,25 +3294,30 @@ img {
     font-weight: 400;
     /* border: solid 3px red; */
 }
-#cart .mini{
+
+#cart .mini {
     width: 15px;
     border-color: #797474;
 }
+
 /* RWD桌機 */
-@media (min-width:992px){
+@media (min-width:992px) {
+
     #cart .small1,
-    #cart .small2{
+    #cart .small2 {
         display: none;
     }
 }
+
 /* RWD手機 */
 @media (max-width:576px) {
-    #cart{
-    }
-    #cart .nav{
+    #cart {}
+
+    #cart .nav {
         margin-top: 15vh;
     }
-    #cart nav{
+
+    #cart nav {
         /* width: 100%; */
         width: 390px;
         /* height: 20vh; */
@@ -3327,28 +3327,34 @@ img {
         /* padding: 0 5% ; */
         /* margin: 0 auto; */
     }
-    #cart .deta{
+
+    #cart .deta {
         margin-top: 5vh;
         margin-left: 6%;
     }
-    #cart .deta h3{
+
+    #cart .deta h3 {
         width: 70%;
     }
-    #cart .course_c{
+
+    #cart .course_c {
         margin-left: -7%;
     }
+
     #cart .bar .price,
     #cart .bar .no,
     #cart .money,
-    #cart .noon{
+    #cart .noon {
         display: none;
     }
-    #cart .hrb{
+
+    #cart .hrb {
         margin-left: -7%;
         width: 333px;
         /* margin-bottom: 158.5px; */
     }
-    #cart .tea{
+
+    #cart .tea {
         display: flex;
         flex-direction: column;
         /* justify-content: flex-start; */
@@ -3356,75 +3362,93 @@ img {
         margin-left: 12%;
         margin-bottom: 10vh;
     }
-    #cart .tea h2{
+
+    #cart .tea h2 {
         line-height: 23px;
         margin-left: -62%;
         margin-bottom: 8vh;
     }
-    #cart .friday{
+
+    #cart .friday {
         width: 120%;
     }
-    #cart .box{
+
+    #cart .box {
         margin: -12vh 0 0 -70%;
     }
-    #cart .subtotal{
+
+    #cart .subtotal {
         margin: -4vh 0 0 90%;
     }
-    #cart .mini{
+
+    #cart .mini {
         margin: -7vh 0 0 115%;
     }
-    #cart .small1{
+
+    #cart .small1 {
         margin: 0 0 -1.5vh -135%;
     }
-    #cart .small2{
+
+    #cart .small2 {
         margin: 0 0 -1.5vh -135%;
     }
-    #cart .act h3{
+
+    #cart .act h3 {
         /* width: 68px; */
         /* height: 19px; */
         width: 40%;
         height: 2.2vh;
         margin: -2vh 0 0 -45%;
     }
-    #cart .act h1{
+
+    #cart .act h1 {
         margin: 1vh 0 0 -45%;
     }
-    #cart .act h2{
+
+    #cart .act h2 {
         width: 100%;
         margin-left: -46%;
         /* margin: 0.5vh 0 0 10%; */
     }
-    #cart .sub9{
+
+    #cart .sub9 {
         margin: -6vh 0 0 -70%;
     }
-    #cart .sub99{
+
+    #cart .sub99 {
         margin: -4vh 0 0 90%;
     }
-    #cart .mini9{
+
+    #cart .mini9 {
         margin: -15vh 0 0 115%;
     }
-    #cart .total hr{
+
+    #cart .total hr {
         width: 276px;
         margin: 0 0 0 -100%;
         border-color: #797474;
     }
-    #cart .total_money{
+
+    #cart .total_money {
         height: 10vh;
         margin: 0;
         margin-left: -20%;
     }
-    #cart .total_money h2{
+
+    #cart .total_money h2 {
         width: 6rem;
         margin: 0;
         padding: 0;
     }
-    #cart .sent{
+
+    #cart .sent {
         width: 276px;
         height: 40px;
         margin-top: -4vh;
         margin-left: 15%;
     }
-    #cart .more{
+
+    #cart .more {
         margin-top: 3vh;
         margin-left: -8%;
     }
@@ -3474,7 +3498,8 @@ img {
 #reserve .deta h4 {
     color: #3C4935;
 }
-#reserve .nav h1{
+
+#reserve .nav h1 {
     font-weight: 600;
     color: #3C4935;
 }
@@ -3677,55 +3702,49 @@ img {
     margin: 0 auto;
     /* border: solid 5px salmon; */
 }
+
 /* RWD手機 */
 @media (max-width:576px) {
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve .nav{
+    #reserve .nav {
         margin: 12vh 0 0 0;
     }
-    #reserve nav{
+
+    #reserve nav {
         margin: 5vh 0 0 -75%;
     }
-    #infoModal .circle{
+
+    #infoModal .circle {
         /* margin-left: -15%; */
         margin-left: -18%;
     }
-    #infoModal{
+
+    #infoModal {
         width: 88%;
     }
-    #reserve{
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
-    #reserve{
+    #reserve {}
 
-    }
+    #reserve {}
 }
+
 /* ---最新消息單獨分頁news_content--- */
 #news_content {
     height: 100vh;

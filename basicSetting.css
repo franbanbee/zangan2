@@ -465,46 +465,48 @@ img {
 
 /* topbarm */
 #topbarm {
-	position: fixed;
-	/* position會將寬度轉換為內容等寬 */
-	top: 0;
-	left: 0;
-	z-index: 999;
-	
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	
-	/* width: 100%; */
-	
-	/* padding: 20px; */
-	background-color: #3C4935;
-	list-style: none;
+    position: fixed;
+    /* position會將寬度轉換為內容等寬 */
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* width: 100%; */
+
+    /* padding: 20px; */
+    background-color: #3C4935;
+    list-style: none;
     width: 390px;
     height: 70px;
     margin-bottom: 25vh;
 }
 
 #topbarm .logo {
-	width: 82px;
+    width: 82px;
     margin: 0 5%;
 }
 
 #topbarm ul {
-	display: flex;
-	justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#topbarm .icon_signup img{
+#topbarm .icon_signup img {
     margin-left: 1.2rem;
 }
-#topbarm  h3{
+
+#topbarm h3 {
     width: 5rem;
     color: #fff;
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.285em;
 }
+
 #topbarm .icon_signup {
     display: flex;
     justify-content: center;
@@ -517,224 +519,197 @@ img {
     margin-right: 60px;
 }
 
-/* .icon a {
-	display: block;
-	width: 35px;
-	height: 35px;
-	margin: 0 5px;
-}
-
-.icon-fb {
-	background-image: url(../images/icon-fb.svg);
-}
-
-.icon-ig {
-	background-image: url(../images/icon-ig.svg);
-}
-
-.icon-line {
-	background-image: url(../images/icon-line.svg);
-}
-
-.icon-fb:hover {
-	background-image: url(../images/icon-fb-hover.svg);
-}
-
-.icon-ig:hover {
-	background-image: url(../images/icon-ig-hover.svg);
-}
-
-.icon-line:hover {
-	background-image: url(../images/icon-line-hover.svg);
-} */
-
 #topbarm .menu {
-	padding: 10px 15px;
-	margin-top: 15px;
-	border-radius: 50px;
-	/* 玻璃擬態(毛玻璃)效果 */
-	background-color: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(5px);
-	/* 必須搭配背景半透明 */
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	/* 修改input邊框的預設樣式 */
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
-	width: 300px;
-	height: 100vh;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 50px;
+    /* 玻璃擬態(毛玻璃)效果 */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    /* 必須搭配背景半透明 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* 修改input邊框的預設樣式 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+    width: 300px;
+    height: 100vh;
 }
-
-#topbarm .menu a {
-	/* display: block; */
-	/* text-decoration: none; */
-	/* 取消<a>預設底線 */
-	/* color: black; */
-	/* 修改瀏覽器預設的<a>字色 */
-	/* padding: 5px 10px; */
-	/* text-align: center; */
-}
-
-/* .menu li::after {
-	content: "";
-	display: block;
-	width: 0%;
-	height: 2px;
-	background-color: black;
-} */
 
 #topbarm .menu li:hover::after {
-	/* width: 100%;
+    /* width: 100%;
 	transition: .35s; */
-	/* 轉場效果 */
+    /* 轉場效果 */
 }
-#topbarm .menu img{
+
+#topbarm .menu img {
     width: 20px;
     height: 20px;
 }
-#topbarm a{
-	text-decoration: none;
+
+#topbarm a {
+    text-decoration: none;
 }
-#topbarm .icon_logi{
-	margin: 0 auto;
+
+#topbarm .icon_logi {
+    margin: 0 auto;
 }
-#topbarm .icon_login img{
-	margin-right: 10%;
+
+#topbarm .icon_login img {
+    margin-right: 10%;
 }
 
 
 /* RWD平板+桌機 */
-@media (min-width:577px){
-	#topbarm{
+@media (min-width:577px) {
+    #topbarm {
         display: none;
     }
-	#topbarm .hamburger {
-		display: none;
-	}
+
+    #topbarm .hamburger {
+        display: none;
+    }
 }
+
 /* RWD手機 */
 @media (max-width:576px) {
-	#topbarm ul {
-		justify-content: center;
-	}
-	/* 漢堡按鈕  */
-	#topbarm .nav_box {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-	}
+    #topbarm ul {
+        justify-content: center;
+    }
 
-	#topbarm .hamburger {
-		display: inline-block;/* 自動抓內容(.bar)的尺寸 */
-		cursor: pointer;
-		/* 取消button預設樣式 */
-		background-color: transparent;
-		border: none;
-		padding: 0;
-	}
+    /* 漢堡按鈕  */
+    #topbarm .nav_box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
-	#topbarm .bar {
-		display: block;/* 修改span行內元素為區塊 */
-		width: 25px;
-		height: 3px;
-		margin: 5px auto;
-		background-color: #fff;
-		transition: all 0.3s ease-in-out;
-	}
+    #topbarm .hamburger {
+        display: inline-block;
+        /* 自動抓內容(.bar)的尺寸 */
+        cursor: pointer;
+        /* 取消button預設樣式 */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(2) {
-		opacity: 0;
-	}
+    #topbarm .bar {
+        display: block;
+        /* 修改span行內元素為區塊 */
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
+    #topbarm .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-	#topbarm .hamburger.is-active .bar:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
-	#topbarm .navigation {
-		display: none;
-		position: absolute;
-		top: 50px;
-		left: -20px;
-		padding: 20px;
-		border-radius: 5px;
-		width: 390px;
+    #topbarm .hamburger.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-		/* 玻璃擬態(毛玻璃)效果 */
-		/* background-color: rgba(255, 255, 255, 0.2); */
-		background-color: rgba(60,73,53, 0.85);
-		backdrop-filter: blur(5px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
-		
-		animation: navigation 0.35s both;
-	}
-	#topbarm .navigation li{
+    #topbarm .hamburger.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #topbarm .navigation {
+        display: none;
+        position: absolute;
+        /* top: 50px; */
+        top: 5vh;
+        /* left: -20px; */
+        left: -130%;
+        padding: 20px;
+        border-radius: 5px;
+        width: 390px;
+        /* width: 100%; */
+
+        /* 玻璃擬態(毛玻璃)效果 */
+        /* background-color: rgba(255, 255, 255, 0.2); */
+        background-color: rgba(60, 73, 53, 0.85);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+
+        animation: navigation 0.35s both;
+    }
+
+    #topbarm .navigation li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
     }
-    #topbarm .icon_signup{
+
+    #topbarm .icon_signup {
         margin: 0 auto;
     }
-    #topbarm .icon_login{
+
+    #topbarm .icon_login {
         display: flex;
         justify-content: center;
         align-items: center;
-		margin: 0 auto;
+        margin: 0 0 0 -10%;
     }
 
-	@keyframes navigation {
-		from {
-			opacity: 1;
-		}
+    @keyframes navigation {
+        from {
+            opacity: 1;
+        }
 
-		to {
-			opacity: 0;
-		}
-	}
+        to {
+            opacity: 0;
+        }
+    }
 
-	#topbarm .navigation.show {
-		display: block;
-		animation: show 0.35s both;
-	}
+    #topbarm .navigation.show {
+        display: block;
+        animation: show 0.35s both;
+    }
 
-	@keyframes show {
-		from {
-			opacity: 0;
-		}
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
 
-		to {
-			opacity: 1;
-		}
-	}
-	#topbarm .menu {
-		flex-direction: column;
-		/* 取消玻璃擬態效果 */
-		background-color: transparent;
-		backdrop-filter: none;
-		border: none;
-		box-shadow: none;
-		/* margin-left: 5%; */
-		margin-top: -5vh;
-	}
-	#topbarm .menu li{
-		width: 200px;
-		margin-left: 20%;
-	}
-	#topbarm .menu img{
-		width: 20px;
-		height: 20px;
-	}
-	#topbarm .menu a {
-		padding: 15px 10px;
-	}
-	/* .icon a {
-		margin: 0 3px;
-	} */
+        to {
+            opacity: 1;
+        }
+    }
+
+    #topbarm .menu {
+        flex-direction: column;
+        /* 取消玻璃擬態效果 */
+        background-color: transparent;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        /* margin-left: 5%; */
+        margin-top: -5vh;
+    }
+
+    #topbarm .menu li {
+        width: 200px;
+        margin-left: -70%;
+    }
+    #topbarm .menu li h3{
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.12rem;
+    }
+
+    #topbarm .menu img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #topbarm .menu a {
+        padding: 15px 10px;
+    }
 }
 
 
