@@ -1,0 +1,731 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap');
+
+/*eric css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;  /*不累加邊框與內距 rwd 甜甜*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: /*⻄文*/ -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/ "蘋方-繁", "PingFang TC", "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* 共用 */
+img {
+    display: block; /*本來是inline-block,會有空白間距*/
+    width: 100%;
+}
+body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
+    display: none;
+}
+h1,h2,p,h4{    /*p內文 h4標註*/
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing:  .12em;
+    line-height: 1.8rem;
+}
+
+h3{   /*中文上方的英文小標*/
+	font-family: 'Unna', serif;
+	letter-spacing:  .12em;
+	font-size: .9rem;
+}
+
+h1{
+	font-weight: 400;
+    font-size: 1.5rem;
+}
+
+h2{
+	font-weight: 500;
+    font-size: 1rem;
+}
+
+p{
+	font-weight: 500;
+    font-size: .9rem;
+}
+h4{
+	font-weight: 500;
+    font-size: .75rem;
+}
+
+
+
+/*-----------------------------------------------------------*/
+
+
+/* 內容區  */
+    /* image caroisel 工作坊輪播區 */
+		
+	.main-carousel{
+		width: 100%;
+		height: 48vh;
+		
+	}
+	.carousel-cell img{
+		height: 48vh;
+		object-fit: cover;
+		position: relative;
+	}
+
+	.carousel_words{
+		position: absolute;
+	    top: 0;
+		background-color: rgba(231, 227, 218,0.3);
+		backdrop-filter: blur(10px) ;
+		width: 30%;
+		height: 48vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+	.carousel_words .words{
+		margin-left:20%;
+		margin-right:10%;
+		overflow: hidden;
+	    text-overflow: ellipsis;  /*文字超過時出現省略號*/
+	}
+	.carousel_words div> *{
+		color: #fff;
+	}
+
+    .carousel_words h2{
+	margin: 10px 0;
+	text-align: justify; /*!!!!!齊行的意思*/}
+
+
+	.carousel_words img{
+		width: 20%;
+		height:23%;  /*本來沒有 因為抓不到圖片所以好像會壞掉; */
+	}
+
+	.carousel_words h1{
+	margin-top: 10px;
+	font-weight: 600;
+	}
+
+	.carousel_words a{
+		font-family: 'Noto Serif TC', serif;
+	    letter-spacing:  .12em;
+        line-height: 34px;
+		font-size: 0.9rem;
+		display: block;
+		align-items: flex-end;
+		text-decoration: none;
+
+		position: relative;
+	}
+
+/* 箭頭 */
+.words .next_btn svg{
+    width: 28%;
+	position: absolute;
+	bottom: 5px;
+  }
+.container .next_btn svg {
+    width: 20%;
+    position: absolute;
+    bottom: -7px;
+    right: -5%;
+}
+.words .next_btn svg path,
+.container .next_btn svg path{
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+  }
+.words a:hover path,
+.container a:hover path{
+    animation: arrow 1s ease-out backwards;
+  }
+ @keyframes arrow{
+    0%{
+      stroke-dashoffset: 0;
+    }
+    80%{
+      stroke-dashoffset: 250;
+    }
+    100%{
+      stroke-dashoffset: 500;
+    }
+  }  
+ 
+  @media (max-width:1320px){
+  .words .next_btn svg {
+    width: 33%;
+   }
+}  
+  @media (max-width:992px){
+	.carousel_words img{
+		width: 25%;
+	}
+	.carousel_words {
+        width: 40%;
+		}
+	.carousel_words h1{
+		font-size: 1.3rem;
+	}
+	.carousel_words h2{
+		font-size: .9rem;
+	}
+}
+	  
+	@media (max-width:576px){
+		.words .next_btn svg {
+			width: 50%;
+		   }
+		.carousel_words img{
+			width: 32%;
+		}
+		.carousel_words {
+			width: 40%;
+			}
+		.carousel_words h1{
+			font-size: 1rem;
+		}
+	
+		.carousel_words h2{
+			font-size: .8rem;
+			/*以下幾行為 多行省略的寫法*/
+			overflow: hidden;
+			text-overflow: ellipsis;  /*文字超過時出現省略號*/
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp:3;   /*行數*/
+			}
+		.carousel_words .words {
+			margin-left: 17%;
+			margin-right: 9%;
+		}
+		.flickity-prev-next-button .flickity-button-icon{
+			display: none;
+		}
+		.flickity-button{
+			color: transparent;
+		}
+}
+
+@media (max-width:430px){
+	.words .next_btn svg {
+		width: 68%;
+	   }
+	.carousel_words img{
+		width: 38%;
+	   }
+	.carousel_words h2{
+		font-size: .8rem;
+		letter-spacing: .08rem;
+	   }
+	.carousel_words a{
+		font-size: .8rem;
+		padding-top: 1.2rem;
+	   }
+}
+
+
+	
+/* 選取按鈕區  要跳到此頁面的對應區塊 */
+	#courseIntro{
+		width: 100%;
+		height: 240px;
+		padding: 48px 10%;
+		background-color: #fff;
+	}
+
+	#courseIntro div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	.button ul{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.button li{
+		display: flex;
+		width: 12rem;
+		height: 2.6rem;
+		border: 1px solid #E7E4DB;
+		border-radius: .3rem;   /*圓角*/
+		justify-content: center;
+		align-items: center;
+	}
+
+	.button a{
+		display: block;
+		text-decoration: none;
+		padding: 2% 25%;
+		font-family: 'Noto Serif TC', serif;
+		letter-spacing:  .12em;
+		line-height: 40px;
+		font-weight: 700;
+		color: #3C4935;
+	}
+
+	.button li:hover a{
+		color: #fff;
+	}
+
+	.button li:hover{
+       background-color: #3C4935;
+	   transition-duration: 1s ;
+	}
+
+
+	@media (max-width:1320px){
+		.button a {
+			padding: 2% 15%;
+		}
+		.button li{
+			width: 10rem;
+		}
+}
+
+	@media (max-width:992px){
+
+		#courseIntro{
+			padding: 48px 8%;
+		}
+		.button a {
+			padding: 2% 12%;
+		}
+		.button li{
+			width: 6.5rem;
+		}
+}
+		@media (max-width:576px){
+		#courseIntro{
+			height: 155px;
+		}
+		#courseIntro .button{
+			display: none;
+		}
+}
+/* 課程區大圖 *5 section  */
+#courseAll{
+	display: flex;
+
+	width: 100%;
+	height: auto;
+	background-color: #3C4935;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.container{
+   width: 100%;
+   height: 100%;
+   margin: 10vh 7%;
+}
+
+
+/*#courseAll section*/
+.container section{
+	width: 100%;
+	height:100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+/* #perfume:hover .img-parallax{
+	cursor: pointer;
+	position: absolute;
+    transform: scale(180%);
+} */
+
+
+.img-parallax {
+	width: 100vmax;
+	/* z-index: -1; */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,0);
+	pointer-events: none
+  }	
+
+
+
+
+/*課程標籤*/
+
+
+/*香水*/
+/*#courseAll section div*/
+
+
+ 
+#courseAll section .right{
+	/* display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	right: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px; */
+
+	position:  absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align:  left;
+	bottom: 12%;
+	right: 0px;
+	width: 32%; 
+    /* height: 23vh; */
+	padding: 2.5% 3%;
+	opacity: 1;
+    
+    /*標籤樣式*/
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#courseAll section .left{
+	display: block;
+	text-align: left;
+    position: absolute;
+
+	width: 32%;
+    /* height: 23vh; */
+    padding: 2.5% 3%;
+	bottom: 12%;
+	left: 0px;
+	opacity: 1;
+    
+    /*標籤樣式*/
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+
+#courseAll a{
+	display: block;
+	text-align: right;
+	z-index: 3;
+
+	text-decoration: none;
+	font-family: 'Noto Serif TC', serif;
+		letter-spacing:  .12em;
+		font-weight: 600;
+		font-size: .9rem;
+		color: #fff;
+	position: relative;	
+}
+
+#courseAll h1{
+	color: #fff;
+	margin-bottom: 5%;
+	font-weight: 600;
+}
+#courseAll h2{
+	color: #fff;
+	padding-right: 25%;
+	text-align: justify;	
+}
+
+
+
+/* 標籤滑入
+.container > section:hover .left{
+	animation: slideIn 1.5s  ease-in-out forwards;	
+}
+@keyframes slideIn{
+	from{
+		bottom: 12%;
+		left: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		left: 0;
+		opacity: 1;
+	}
+}
+*/
+
+/* 標籤滑入
+.container > section:hover .right{
+	animation: slideInR 1.5s  ease-in-out forwards;	
+	display: none;
+}
+@keyframes slideInR{
+	from{
+		bottom: 12%;
+		right: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		right: 0;
+		opacity: 1;
+	}
+}
+*/
+
+/* 圖片放大 */
+
+.container > section:hover .img-parallax{
+	animation: scaleOOO 1s  ease-in-out forwards;
+
+}
+@keyframes scaleOOO{
+	from{
+       width: 100%;
+	   height: auto;
+	}
+	to{
+		width: 120%;
+		height: auto;
+		transition-duration: 1.2s;
+	}
+}
+
+
+
+
+
+/* 標籤滑入*/
+.animate-in-view .left{
+	animation: slideIn 1.5s  ease-in-out forwards;	
+}
+@keyframes slideIn{
+	from{
+		bottom: 12%;
+		left: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		left: 0;
+		opacity: 1;
+	}
+}
+
+
+/* 標籤滑入*/
+.animate-in-view .right{
+	animation: slideInR 1.5s  ease-in-out forwards;	
+	display: none;
+}
+@keyframes slideInR{
+	from{
+		bottom: 12%;
+		right: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		right: 0;
+		opacity: 1;
+	}
+}
+
+
+/* 圖片放大 
+
+.animate-in-view .img-parallax{
+	animation: scaleOOO 1s  ease-in-out forwards;	
+	
+}
+@keyframes scaleOOO{
+	from{
+       width: 100%;
+	   height: auto;
+	}
+	to{
+		width: 120%;
+		height: auto;
+		transition-duration: 1.2s;
+	}
+}
+*/
+
+@media (max-width:1320px){
+	.container section{
+		height:85vh;
+	}
+	.img-parallax {
+		width: 100%;
+        height: 85vh;
+		object-fit: cover;
+	  }	
+	
+	#courseAll section .left,#courseAll section .right{
+		width: 40%;
+	}
+
+	.container .next_btn svg {
+		width: 21%;
+		right: -4%;
+	}
+}
+
+@media (max-width:992px){
+	.container section{
+		height:85vh;
+	}
+	#courseAll section .left,#courseAll section .right{
+		width: 48%;
+		padding: 3% 3%;
+	}
+	#courseAll h1{
+		font-size: 1.2rem;
+	}
+	#courseAll h2{
+		font-size: .8rem;
+	}
+	.container .next_btn svg {
+		right: -5%;
+	}
+	.container > section:hover .img-parallax{
+		animation: scaleOOO 1s  ease-in-out forwards;
+	
+	}
+	@keyframes scaleOOO{
+		from{
+		   width: 100%;
+		   height: 85vh;
+		   object-fit: cover;
+		}
+		to{
+			width: 120%;
+			height: 100vh;
+			transition-duration: 1.2s;
+			object-fit: cover;
+		}
+	}
+	#courseAll a {
+		font-size: .8rem;
+    }
+}
+
+@media (max-width:576px){
+	.container section{
+		height:65vh;
+	}
+	.container {
+		margin: 5vh 6%;
+	}
+	#courseAll section .left,#courseAll section .right{
+		width: 50%;
+		height: 10vh;
+		padding: 2% 3%;
+	}
+	#courseAll h1{
+		font-size: 1.2rem;
+	}
+	#courseAll h2{
+		display: none;
+	}
+}
+
+
+
+/* foooter */
+/* <!-- go top --> */
+#gotop{
+	position: fixed;
+	cursor: pointer; /* 手型 */ 
+	
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 80px;
+	z-index: 999;
+	background-color: rgba(60, 73, 53, 0.5);
+	border: #fff 1px solid;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#gotop:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition-duration: .5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+#gotop img{
+  width: 85%;
+}
+
+/*自由繪畫
+#courseAll section div{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}*/
+
+
+/* 0508_3/0424_3 */
+

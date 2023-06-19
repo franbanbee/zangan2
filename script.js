@@ -54,3 +54,9 @@ $(function () {
     $('.navigation').toggleClass('show');
   });
 });
+
+// 滑動載入
+// 預設淡入淡出
+$('.smoove').smoove({
+  offset: '30%'
+});

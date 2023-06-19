@@ -1,0 +1,76 @@
+
+/*#courseAll section*/
+#courseAll section{
+	position: relative;
+    height: 650px;
+}
+
+
+
+
+/*課程標籤*/
+
+
+/*香水*/
+/*#courseAll section div*/
+
+/*
+#courseAll section div{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	right: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#courseAll a{
+	display: block;
+	text-align: right;
+	z-index: 3;
+
+	text-decoration: none;
+	font-family: 'Noto Serif TC', serif;
+		letter-spacing:  .12em;
+		font-weight: 600;
+		font-size: .9rem;
+		color: #fff;
+}
+
+#courseAll h1{
+	color: #fff;
+	padding-bottom: 20px;
+	font-weight: 600;
+}
+#courseAll h2{
+	color: #fff;
+	padding-right: 100px;
+	text-align: justify;
+	
+}
+*/
+/*自由繪畫
+#courseAll section div{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}*/
