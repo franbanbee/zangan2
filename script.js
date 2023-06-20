@@ -1,12 +1,15 @@
 // cart
 // 課程的數量增減
+// 課程數量>=0 if判別式
 var num = 1;//宣告邊數num 變數值為1
 
 $(".minus").click(
   function () {
-    num = num - 1;
-    $(".num").text(num);
-    check();//執行check裏頭的if與else
+    if(num>=1){
+      num = num - 1;
+      $(".num").text(num);
+      check();//執行check裏頭的if與else
+    }
   }
 );
 
@@ -24,9 +27,11 @@ var num1 = 1;//宣告邊數num 變數值為1
 
 $(".minus1").click(
   function () {
-    num1 = num1 - 1;
-    $(".num1").text(num1);
-    check();//執行check裏頭的if與else
+    if(num1>=1){
+      num1 = num1 - 1;
+      $(".num1").text(num1);
+      check();//執行check裏頭的if與else
+    }
   }
 );
 
