@@ -60,3 +60,17 @@ $(function () {
 $('.smoove').smoove({
   offset: '30%'
 });
+
+
+//滑動置頂
+$('#gotop').click(function () {
+  $('html,body').animate({ scrollTop: 0 }, 1500);
+})
+//置頂按鈕淡出淡入
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 200) {
+    $('#gotop').stop().fadeTo('fast', 1);   //.fadeTo(1000,1) => 1000是一秒，沒有給速度的話要給空值 ""(預設為0.4秒)
+  } else {
+    $('#gotop').stop().fadeOut();
+  }
+});

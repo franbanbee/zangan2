@@ -1124,12 +1124,9 @@ img {
 }
 
 /* hover */
-/* #course .arrow_bk img:hover {
-    background-image: url(img/index/index-news/arrow\(黑\).svg);
-    width: 30px;
-    height: 30px;
-    display: block;
-} */
+#course .arr2 img:hover {
+    background-image: url(img/index/index-course/smell黑.svg);
+}
 
 /* RED手機 */
 @media (max-width:576px) {
@@ -1648,11 +1645,6 @@ img {
     line-height: 1.5rem;
 }
 
-/* :hover */
-/* #news .arrow img {
-    background-image: url(img/index/index-news/arrow\(白\).svg);
-} */
-
 #news .arrow img:hover {
     background-image: url(img/index/index-news/arrow\(黑\).svg);
 }
@@ -1938,7 +1930,6 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin-top: 400px; */
     width: 100%;
     height: 50vh;
     position: relative;
@@ -1950,34 +1941,28 @@ img {
 
 .footer_ul {
     display: flex;
-    /* border: solid 5px salmon; */
     width: 92%;
     margin-left: 9%;
 }
 
 .footer_li {
-    /* position: relative; */
     width: 350px;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border: solid 5px salmon; */
 }
 
 .copyright {
     color: #fff;
-    /* font-size: 12px; */
     font-size: 0.75rem;
     font-family: 'Unna', serif;
     padding: 30px 0;
-    /* margin-bottom: 30px; */
-    /* border: solid 5px salmon; */
+    padding: 2px 0;
 }
 
 #footer h1 {
     color: #fff;
-    /* font-size: 30px; */
     font-size: 1.875rem;
     font-family: 'Unna', serif;
 }
@@ -1989,7 +1974,6 @@ img {
 
 #footer li {
     margin: 30px 0 0 0;
-    /* border: solid 3px red; */
 }
 
 #footer .footer_nav li a {
@@ -1997,47 +1981,41 @@ img {
     flex-direction: column;
 }
 
-.footer_main {
-    /* margin-top:-30px ; */
-}
-
 #footer h3 .addr {
     margin: 10px 0;
-    /* border: solid 3px rgb(200, 134, 134); */
 }
 
 #footer h3 .time {
     margin: 30px 0 10px 0;
-    /* border: solid 3px rgb(200, 134, 134);  */
 }
 
 #footer h3 .time h3 {
     margin: 10px 0 0 0;
-    /* border: solid 3px rgb(200, 134, 134);  */
 }
 
 .icon_soc img {
-    /* padding-top: 20px 0; */
     margin: 20px 0;
-    /* padding-bottom: 50px ; */
-    /* border: solid 3px rgb(200, 134, 134); */
 }
 
 #footer .faq {
     margin-top: -150px;
-    /* border: solid 3px rgb(200, 134, 134);  */
 }
 
 #footer .blank {
     background-color: #3C4935;
-    /* background-color: red; */
     width: 100px;
     height: 50px;
     position: absolute;
     left: 80px;
     top: 80px;
 }
-
+/* 調整footer */
+#footer .item2 {
+    margin-left: 14.5%;
+}
+#footer .item3{
+    margin-left: 2%;
+}
 /* RWD桌機 */
 @media (min-width:992px) {
     #footer .blank {
@@ -2067,11 +2045,6 @@ img {
         margin-left: 1%;
     }
 
-    #footer .eng {
-        /* font-size: 1.2rem; */
-        /* margin-bottom: -10px; */
-    }
-
     .footer_nav .addr {
         width: 11em;
         font-size: 0.75rem;
@@ -2082,11 +2055,6 @@ img {
 
     #footer h3 .time {
         margin: 20px 0 0 -115px;
-    }
-
-    #footer h3 .time h3 {
-        /* font-size: 0.75rem; */
-        /* letter-spacing: 0.15em; */
     }
 
     #footer .copyright {
@@ -2112,12 +2080,6 @@ img {
         margin: -125px 0 0 -515px;
     }
 
-    #footer .faq h3 {
-        /* font-size: 0.75rem; */
-        /* line-height: 5em; */
-        /* letter-spacing: 0.1em; */
-    }
-
     #footer .blank {
         background-color: #3C4935;
         width: 120px;
@@ -2126,6 +2088,13 @@ img {
         position: absolute;
         left: 70px;
         top: 2vh;
+    }
+    /* 調整footer後 */
+    #footer .item2{
+        margin-left: 0.5%;
+    }
+    #footer .copyright{
+        margin-bottom:-0.2vh;
     }
 }
 
@@ -4588,6 +4557,7 @@ p {
 /*底層logo */
 .media_page_logo {
     padding: 0 5px;
+    margin-top: 13vh;
     /* border: #7a15d3 5px solid; */
 }
 
