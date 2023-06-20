@@ -3895,7 +3895,8 @@ img {
     background-image: url(img/index/index-news_content/arrow\(白\).svg);
 }
 
-#news .arrow img:hover {
+/* hover */
+#news_content .arrow img:hover {
     background-image: url(img/index/index-news/arrow\(黑\).svg);
 }
 
