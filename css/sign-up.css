@@ -378,3 +378,12 @@ padding-right: 2px;
 	width: 20px;
 	height: auto;
 }
+/* RWD手機 */
+@media(max-width:576px){
+	#sign-up .right-side{
+		display: none;
+	}
+	#sign-up .left-side{
+		width: 100%;
+	}
+}
