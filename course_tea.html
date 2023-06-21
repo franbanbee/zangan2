@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, user-scalable=1">
+    <title>tea</title>
+    <link rel="icon" href="./img/index/favicon3.ico">
+     <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href=./course_item.css>
+       <!-- 套用思詠的hreader/footer -->
+    <link rel="stylesheet" href="./basicSetting.css">
+
+</head>
+<body>
+<!-- header -->
+    <!-- topbar 首頁區  -->
+    <header id="topbar">
+        <!-- 漢堡按鈕 -->
+        <!-- <div class="nav_box">
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div> -->
+        <ul class="menu">
+            <li><a href="about.html">
+                    <h3>關於蘵感</h3>
+                </a></li>
+            <li><a href="news.html">
+                    <h3>最新消息</h3>
+                </a></li>
+            <li><a href="course.html">
+                    <h3>課程介紹</h3>
+                </a></li>
+            <li><a href="media.html">
+                    <h3>蘵感文章</h3>
+                </a></li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="img/index/index-topbar/logo.svg" alt="">
+        </a>
+        <!-- 選單列 -->
+        <nav class="navigation">
+            <ul class="icon">
+                <li><a href="signup.html" class="icon_signup">
+                        <h3>快速報名</h3>
+                        <img src="img/index/index-topbar/立即報名（白）.svg" alt="">
+                    </a></li>
+                <li><a href="login.html" class="icon_login">
+                        <img src="img/index/index-topbar/user.svg" alt="">
+                        <h3>登入</h3>
+                    </a>
+                </li>
+                <li><a href="cart.html"><img src="img/index/index-topbar/cart.svg" alt="" width="40" height="40"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- topbarm 首頁區  -->
+    <header id="topbarm">
+        <div class="nav_box">
+            <!-- 漢堡按鈕 -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- 選單列 -->
+            <nav class="navigation">
+                <ul class="menu">
+                    <li>
+                        <a href="signup.html" class="icon_signup">
+                            <h3>快速報名</h3>
+                            <img src="img/index/index-topbar/logo.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <h3>關於蘵感</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <h3>最新消息</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course.html">
+                            <h3>課程介紹</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="media.html">
+                            <h3>蘵感文章</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="icon_login">
+                            <img src="img/index/index-topbar/cart.svg" alt="">
+                            <h3>登入</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/index/index-topbar/logo.svg" alt="">
+            </a>
+        </h1>
+        <li>
+            <a href="cart.html"> 
+                <img src="img/index/index-topbar/cart.svg" alt="">
+             </a>
+        </li>
+    </header>
+  <!-- 內容區 -->
+  <main>
+    <!-- image+課程簡介 -->
+ <section id="introduce">
+    <div class="container">
+        <bg-img class="img Ctea"></bg-img>
+        <div class="text">
+            <h1>小點茶藝工坊</h1>
+            <h2>”砌一壺溫暖的茶，滋潤您疲憊的身心，
+                帶領您進入日本茶道與和菓子的邂逅角落。"</h2>
+            <p>在這個課程中，我們的導師還會親自示範如何泡製出優質的日本茶，帶著您了解茶道的禮儀與細節。
+                此外，您將學習到如何製作精緻的和菓子，從傳統的日本糕點到現代化的創意甜點，讓您的味蕾享受多變的滋味。
+                品嚐點心的同時，嗅著茶葉的風味與香氣，唇齒留香的是那流傳千年的日本文化底蘊。</p>
+            
+            <div class="next_btn"> 
+                <a href="./course_perfume3.html">
+                <h3>Next course</h3> 
+                <svg viewBox="0 0 158 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M137.219 1C138.964 10.3333 157 15 157 15H8.9407e-07" stroke="black" stroke-width="2"/>
+                </svg>
+                </a>
+            </div>  
+        </div>
+    </div>    
+</section>
+    <!--遮罩加輪播  -->
+     <section id="marquee">
+          <img class="mask" src="./img/course_item/logo_mask.png" alt="">
+        <div class="view">
+        <div class="pic-container">
+
+            <div class="randomPic"><img src="./img/course_item/Ctea1.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea2.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea3.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea4.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea5.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea1.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea2.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea3.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea4.jpg" alt=""></div>
+            <div class="randomPic"><img src="./img/course_item/Ctea5.jpg" alt=""></div>
+        </div>  
+       </div>
+     </section>
+
+    <!-- 師資介紹  -->
+      <section id="teacher">
+         <div class="all">
+            <!-- 185*185px -->
+            <img src="./img/course_item/teacher_tea.png" alt="" class="smoove_3" data-move-x="-200px">
+            <div class="intro">
+                <div class="title">
+                    <h2>講師介紹</h2>
+                </div>
+                <div class="words">
+                   <div class="words_l smoove_3" data-move-x="300px" >
+                    <h1>Ruta Rio</h1>
+                    <p>日本東京大學茶道研究所碩士 <br>
+                       擅長教授茶道禮儀及藝術技巧</p>
+                   </div>
+                   <div class="words_r smoove_3" data-move-x="300px">
+                    <p>擁有三種日本傳統文化執照，日本千家茶道教授、日本舞踊華山流範、京都和服學院一級和服著付講師。
+                        自幼深受日本文化薰陶，雖然經過人生不同階段的考驗，二十年來對日本傳統技藝學習未曾間斷是日本裏千家茶道在台灣的高位資格者之一。
+                       </p>
+                        <p class="notHave"> 傳授日本前輩專特有品點的家庭和菓子技法，使生活中的一杯茶變得豐富而有趣；藉由日本傳統行事與大家分享在家營造兼具文化意涵與生活美學的品茶氛圍，讓大家更深刻感受日本茶文化魅力！</p>
+                   </div>
+                </div>
+            </div>
+         </div>
+      </section>
+     
+       <!-- 長期短期選擇 -->
+       <section id="select">
+        <!-- <div id="chose">
+           <nav>
+               <div class="marker"></div>
+               <a href=""  class="active">短期課程</a> 
+               <a href="">長期課程</a> 
+           </nav>
+        </div> -->
+        <div id="chose">
+        <ul>
+           <li class="active" onclick="showShort()"><span><a >短期課程</a></span></li>
+           <li onclick="showLong()"><span><a>長期課程</a></span></li> 
+           <div class="marker"></div>
+         </ul>
+         </div>
+      </section>  
+
+     <section id="course">
+        <!-- 短期課程選項 -->
+        <section id="list" >
+           <!-- 經典Muko香水 -->
+           <div class="chosen" onclick=" changeBackground('A')" id="A"  style="background-image: url('./img/course_item/block_click.svg')">
+              <a alt=""  class="detail"  onclick="changeClassA()">
+                   <h3 class="class_name">A</h3>
+                   <div class="box_inner"> 
+                       <h1>經典Muko香水</h1>
+                       <h2>週五 下午14:00-16:00，共6堂<br>
+                           3/3、3/10、3/17、3/24、3/31、4/7</h2> 
+                       </div>    
+                       <div class="price"><p>$</p><h3>8000</h3></div>            
+                   
+               </a> 
+               <a class="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <!-- Button trigger modal -->
+                   <img src="./img/course_item/newcar.svg" alt="" >
+                </a>       
+                   <!-- Modal -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <div class="modal-title" id="exampleModalLabel"><img src="./img/course_item/modal-logo.svg" alt=""></div>
+                           <!-- <h5>Modal title</h5> -->
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                            <h2>已加入購物車!</h2>
+                           </div>
+                           <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                           </div>
+                       </div>
+                       </div>
+                   </div>   
+           </div>
+           
+            <!-- 特調精油香水 -->
+               <div class="chosen"  onclick=" changeBackground('B')" id="B">
+                   <a alt=""  class="detail"  onclick="changeClassB()">
+                        <h3 class="class_name">B</h3>
+                        <div class="box_inner"> 
+                            <h1>特調精油香水</h1>
+                            <h2>週六 下午14:00-16:00，共6堂<br>
+                               4/1、4/8、4/15、4/22、4/29、5/6</h2>
+                           </div>
+                          <div class="price"><p>$</p><h3>7000</h3></div>            
+                            
+                    </a> 
+                                    <a class="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <!-- Button trigger modal -->
+                   <img src="./img/course_item/newcar.svg" alt="" >
+                </a>       
+                   <!-- Modal -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <div class="modal-title" id="exampleModalLabel"><img src="./img/course_item/modal-logo.svg" alt=""></div>
+                           <!-- <h5>Modal title</h5> -->
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                            <h2>已加入購物車!</h2>
+                           </div>
+                           <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                           </div>
+                       </div>
+                       </div>
+                   </div>     
+                </div>
+              
+           <!-- 香水與情感美學 -->
+
+           <div class="chosen" onclick=" changeBackground('C')" id="C">
+               <a alt=""  class="detail"  onclick="changeClassC()">
+                    <h3 class="class_name">C</h3>
+                    <div class="box_inner"> 
+                        <h1>香水與情感美學</h1>
+                        <h2>週三 下午14:00-16:00，共6堂<br>
+                           3/29、4/5、4/12、4/19、4/26、5/3</h2>
+                   </div> 
+                   <div class="price"><p>$</p><h3>8500</h3></div>            
+                         
+                </a> 
+                                <a class="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <!-- Button trigger modal -->
+                   <img src="./img/course_item/newcar.svg" alt="" >
+                </a>       
+                   <!-- Modal -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <div class="modal-title" id="exampleModalLabel"><img src="./img/course_item/modal-logo.svg" alt=""></div>
+                           <!-- <h5>Modal title</h5> -->
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                            <h2>已加入購物車!</h2>
+                           </div>
+                           <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                           </div>
+                       </div>
+                       </div>
+                   </div>     
+            </div>                      
+        </section>
+
+       <!-- 長期課程選項 -->
+           <section id="list2" style="display: none;">
+           <!-- 經典Muko香水 -->
+           <div class="chosen" onclick=" changeBackground('D')" id="D"  style="background-image: url('./img/course_item/block_click.svg') " >
+               <a alt=""  class="detail" onclick="changeClassD()" >
+                   <h3 class="class_name">D</h3>
+                   <div class="box_inner"> 
+                       <h1>香水蘵人</h1>
+                       <h2>週二 下午14:00-16:00，共6堂<br>
+                           6/8、6/15、6/30、7/7、7/14、7/20</h2>
+                       </div>      
+                       <div class="price"><p>$</p><h3>9900</h3></div>            
+                      
+               </a> 
+                               <a class="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <!-- Button trigger modal -->
+                   <img src="./img/course_item/newcar.svg" alt="" >
+                </a>       
+                   <!-- Modal -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <div class="modal-title" id="exampleModalLabel"><img src="./img/course_item/modal-logo.svg" alt=""></div>
+                           <!-- <h5>Modal title</h5> -->
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                            <h2>已加入購物車!</h2>
+                           </div>
+                           <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                           </div>
+                       </div>
+                       </div>
+                   </div>     
+           </div>
+           
+               <!-- 特調精油香水 -->
+               <div class="chosen"  onclick=" changeBackground('E')" id="E">
+                   <a alt=""  class="detail"onclick="changeClassE()" >
+                           <h3 class="class_name">E</h3>
+                           <div class="box_inner"> 
+                               <h1>IPSCA法式奢華</h1>
+                               <h2>週四 下午14:00-16:00，共6堂<br>
+                               4/1、4/8、4/15、4/22、4/29、5/6</h2>
+                           </div> 
+                               <div class="price"><p>$</p><h3>9500</h3></div>            
+                               
+                       </a> 
+                                       <a class="cart" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <!-- Button trigger modal -->
+                   <img src="./img/course_item/newcar.svg" alt="" >
+                </a>       
+                   <!-- Modal -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <div class="modal-title" id="exampleModalLabel"><img src="./img/course_item/modal-logo.svg" alt=""></div>
+                           <!-- <h5>Modal title</h5> -->
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                            <h2>已加入購物車!</h2>
+                           </div>
+                           <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                           </div>
+                       </div>
+                       </div>
+                   </div>     
+                   </div>
+           </section>
+
+
+       <!-- 課程大綱 -->
+       <!-- classA -->
+       <div  class="clssDetail">
+           <div class="decoLogo"></div>
+        <section id="classA">
+            <h1>經典Muko香水</h1>
+            <hr><br><br/>
+            <h2>課程大綱</h2>
+            <p>▪ 香水的調性與架構  <br>
+               學習至少50種不同的香水原物料（包括天然植物精油、原精、單體香料）的香氣個性與特質，製作三款精油香水(共150ml)。<br>
+               ▪ 嗅香訓練<br>
+               Osmothèque香氣博物館特選十多種館藏經典作品，您就算遠赴法國也不見得有機會聞到的絕跡或館藏香氛，都可以在此課程親自嗅聞！，每堂課皆會以不同的香氣鍛鍊自己的鼻子。<br>
+               ▪ 蘵感特製的獨特魅力_經典Muko香水 (100ml)<br>
+               將傳授品牌自創_Muko香水的調配配方。<br>
+               前調揉合了具有透明感的洋梨果汁，中調則透過茉莉花香氣，給人清新自然的感受，後調的印尼廣藿香則給予香氣沉靜的木質氣息，這是一款深受品味人士喜愛的香水，融合乾淨、溫暖的中性氣質，極具知性的木質花香調香水。<br>
+           – 調香師的基本功<br>
+           – 基礎香氣調性與架構<br>
+           – 常見的素材與氣味、情感的詮釋與品鑑<br>
+           – 天然/人工香水原料、香氣家族分類<br>
+           </p>
+           <br><br/>
+            <h2>課程須知</h2>
+            <p>1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+               2.無須任何先備知識，歡迎所有對香水有興趣的學員參加。<br>
+               3.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+               4.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+               5.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+               </p>
+        </section>
+        <section id="classB" style="display: none;">
+           <h1>特調精油香水</h1>
+           <hr><br><br/>
+           <h2>課程大綱</h2>
+           <p> ▪ 嗅香訓練<br>
+               認識及嗅聞近 50 種天然植物精油<br>
+               ▪ 了解精油調香概論<br>
+               學習精油調香概論，含香水結構、香調介紹、調香方法、賦香率等<br>
+               瞭解不同植物精油的提取方法和工藝<br>
+               探索自然香氣的調配技巧和配方設計<br>
+               ▪製作專屬於自己的獨特香水<br>
+               創作個人風格獨特的自然香水2瓶(共200ml)<br>
+          </p>
+          <br><br/>
+           <h2>課程須知</h2>
+           <p>1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+              2.無須任何先備知識，歡迎所有對香水有興趣的學員參加。<br>
+              3.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+              4.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+              5.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+              6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+              </p>
+       </section>
+       <section id="classC" style="display: none;">
+           <h1>香水與情感美學</h1>
+           <hr><br><br/>
+           <h2>課程大綱</h2>
+           <p>▪ 嗅香訓練
+              認識及嗅聞近 50 種天然植物精油<br> 
+              ▪ 探索香味與情感連結<br>
+              認識不同香氣在情感表達和情緒調節方面的作用<br>
+              學習分析香水結構，並理解不同成分的情感聯繫<br>
+               創作具有情感故事的香水作品<br>
+               ▪ 夢想版（Dreamboard）香水<br>
+               以淡雅輕透的香水為基底，將情感投入至此實作， 探索香氣的表達和故事性調配自己的香水配方<br>
+               ▪ 個人香水創作，3 款( 50 ml )香水實作。<br>
+               帶領學員們調配出屬於不同情境的氣味，以香氣將情緒的外放或內斂表現出來<br>
+          </p>
+          <br><br/>
+           <h2>課程須知</h2>
+           <p> 1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+               2.不需要特殊先備知識，歡迎所有對香水與情感相關的主題感興趣的學員參加。<br>
+               (學員需願意進行一些情感探索及表達情感的陳述)<br>
+               3.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+               4.無須任何先備知識，歡迎所有對天然香氛 有興趣的學員參加。<br>
+               5.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+               6.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+               7.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               8.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+              </p>
+       </section>
+       <section id="classD" style="display: none;">
+           <h1>香水蘵人</h1>
+           <hr><br><br/>
+           <h2>課程大綱</h2>
+           <p> 課程旨在提供深入的香水知識和技巧，讓學員能夠進一步了解香水的結構、製作過程和品評方法。<br>
+               課程將從基礎知識開始，逐漸深入探討香水的各個層面，並提供學員實踐和發展自己的香水創作技巧的機會。<br>
+               課程內容既包括理論學習，也包括實際的香水試驗和創作活動、考取專業證照。<br>            
+          </p>
+          <br><br/>
+          <h2>課程大綱</h2>
+          <p>▪ 香水歷史和文化:<br>
+           介紹香水的起源和演變，不同文化中的香水使用方式，著名香水品牌和設計師<br>
+           ▪ 香水的解構: 香水的基本成分：香料、調香劑和固定劑，不同成分的特性和作用，拆解香水的結構：前調、中調和後調。<br>
+           ▪ 香水調香師的工作和技能；<br>
+           - 學習如何進行香水的調配和配方的設計和平衡<br>
+           - 掌握不同原料的比例和配搭技巧<br>
+           - 實踐基本的調香師技巧，調色及調味<br>
+           ▪ 品評技巧與訓練:<br>
+           分辨香水評價的標準和方法，品味香水的技巧和訓練，<br>
+           課堂會進行香水品評比賽和活動，將綜合所學，進一步改進香水成分以及香味。<br>
+           ▪ 香水市場和行業:<br>
+           行業的發展和趨勢，分析市場的結構和競爭，如何推廣品牌銷售策略。<br>
+           ▪ 多款個人香水創作:<br>
+           香水設計的個性化和風格，實際香水創作和調配練習，多樣化風格的設計。<br>              
+         </p>
+         <br><br/>
+          
+           <h2>課程須知</h2>
+           <p> 1.本課程對香水有基本的了解和興趣者皆可報名，無需特定先備知識。<br>
+               2.課程形式: 課程將以講座、實作、討論和實驗等多種形式進行。<br>
+               3.課程材料: 學員將獲得課程講義和相關學習資源。<br>
+               4.考核與證書: 課程可能包含作業、考試或實際創作項目，完成並通過評估的學員將獲得相應的證書或學分。<br>
+               5.時間安排: 課程通常為長期課程，根據具體安排可能持續數週或數月。<br>
+               6.完成本課程的學員可能在香水行業、調香師、香水設計師、香水品牌經營等領域尋求相關職業機會。<br>
+               7.建議學員避免使用敏感或過敏的精油成分，以免引起不適。 <br>
+               8.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               9.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+              </p>
+       </section>
+       <section id="classE" style="display: none;">
+           <h1>IPSCA法式奢華</h1>
+           <hr><br><br/>
+           <h2>課程大綱</h2>
+           <p>IPSCA 法式奢華香水國際證照課<br>
+               課程持續推動多年後，不僅在華人市場上看見越來越多精緻的獨立香水品牌出現，許多調香課程也如雨後春筍般出現，顯見這個教育的推動是成功的。<br>
+               18小時的課程中，學員不僅將學習到香水歷史、調香語言、以及香氣家族分類，也有不少實作活動，例如製作百花香囊、調製香水等等，學員們可以親自嗅聞法國直送的調香原料和香水樣品，彷彿身在法國的時尚街頭！<br>        
+          </p>
+          <br><br/>
+          <h2>課程大綱</h2>
+          <p> ▪ 香水歷史概論:<br>
+           - 介紹香水的起源和發展歷史<br>
+           - 探索不同時期的香水風格和趨勢<br>
+           - 分析不同文化對香水的影響<br>
+           
+            ▪ 香語言:<br>
+               - 學習香水的專業詞彙和術語<br>
+               - 瞭解香水調配中使用的不同成分和材料<br>
+               - 掌握香水的結構和層次組成<br>
+            ▪ 香氣家族分類:<br>
+               認識主要的香氣家族和次要香氣成分，學習區分不同香水調配的特徵和風格，瞭解香水調香師的創作思路和方法<br>
+           ▪ 實作活動:<br>
+               - 製作百花香囊: 學員將學習選擇和混合不同花香的技巧，並親自製作個人化的香囊。
+               - 調製香水: 學員將嘗試使用提供的調香原料，按照指導製作自己的香水配方。
+           ▪ 品評技巧與訓練:<br>
+               提供多種法國的奢華經由與香精，品香與鑑賞。 分辨香水評價的標準和方法，品味香水的技巧和訓練，<br>
+               課堂會進行香水品評比賽和活動，將綜合所學，進一步改進香水成分以及香味。<br>
+           ▪ 香水市場和品牌:<br>
+               - 瞭解國際香水市場的趨勢和競爭環境<br>
+               - 探索奢華香水品牌的歷史和特色<br>
+               - 分析成功品牌的營銷策略和品牌定位<br>             
+         </p>
+         <br><br/>
+           <h2>課程須知</h2>
+           <p> 1.本課程對香水有基本的了解和興趣者皆可報名，無需特定先備知識。<br>
+               2.課程形式: 課程將以講座、實作、討論和實驗等多種形式進行。<br>
+               3.課程材料: 學員將獲得課程講義和相關學習資源。<br>
+               4.考核與證書: 課程可能包含作業、考試或實際創作項目，完成並通過評估的學員將獲得相應的證書或學分。<br>
+               5.時間安排: 課程通常為長期課程，根據具體安排可能持續數週或數月。<br>
+               6.完成本課程的學員可能在香水行業、調香師、香水設計師、香水品牌經營等領域尋求相關職業機會。<br>
+               7.建議學員避免使用敏感或過敏的精油成分，以免引起不適。 <br>
+               8.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               9.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+              </p>
+       </section>
+
+        <!-- 報名按鈕 -->
+        <div id="button">
+           <a href="cart.html">立即報名</a>
+        </div>
+         <!-- FAQ 
+         <section id="faq_all">
+             <div id="faqContainer">
+                <h1>FAQ</h1>
+                <div class="faq"> 
+                     按鈕
+                    <button type="button" class="faq_btn">
+                        <span class="plus_icon"></span>
+                        <span class="minus_icon"></span>
+                    </button>
+                    問題區 
+                    <div class="faqTitle">
+                        <h2>需要自己攜帶什麼物品呢?</h2>
+                    </div>
+                </div>
+                 回答問題區 
+                <div class="faqText">
+                        <p>基本上不需要攜帶任何物品，但歡迎攜帶陶瓷茶器，老師將會介紹數款日本茶陶的特性。
+                        如常滑燒、備前燒、龍爪梅花皮等，以及講解它們合適沖泡的茶類。</p>
+                </div> 
+                <hr>        
+             </div>
+         </section>-->
+         <div class="faq_box">
+            <div class="parent-container">
+                <h1>FAQ</h1>
+              <ul class="faq">
+                <li>
+                  <h2 class="question">和菓子和茶道課程的比例如何分配？
+                    <div class="plus-minus-toggle collapsed"></div>
+                  </h2>
+                    <p class="answer">課程的時間長度根據不同的課程內容而有所不同。老師將會依照不同季節，準備不同的食材與茶葉上課，帶領學員體驗四季的滋味。</p>
+                </li>
+                <li>
+                  <h2 class="question">沒有茶道的經驗也可以報名這個課程嗎？
+                    <div class="plus-minus-toggle collapsed"></div>
+                  </h2>
+                   <p class="answer">我們的課程歡迎任何對茶道和和果子感興趣的人，無論是否有相關經驗。我們的導師將提供基礎知識和指導，以確保您能夠順利參與。</p>
+                </li>
+                <li>
+                    <h2 class="question">我可以攜帶相機拍照或錄影嗎？
+                      <div class="plus-minus-toggle collapsed"></div>
+                    </h2>
+                     <p class="answer">通常情況下，攝影和錄影是允許的，但請在課程前與導師確認相關規定。某些特殊場合可能需要禁止攝影和錄影。如需商業拍攝也很歡迎，但需要先提前告知。</p>
+                </li>
+                 <li>
+                    <h2 class="question">我可以將課程作為團體活動或私人活動嗎？
+                      <div class="plus-minus-toggle collapsed"></div>
+                    </h2>
+                     <p class="answer">絕對可以！我們提供團體和私人茶道和和果子課程，適合各種場合，如生日派對、企業團建或家庭聚會等。請與我們的客戶服務部門聯繫，告知您的需求，我們將為您提供相應的方案。</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </section>
+
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- jQuery Smoove -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+      <script src="./perfume3.js"></script>
+    </main>
+  <footer>
+    <div id="gotop"><img src="./img/course_item/gotop.svg" alt=""></div>
+      <!-- 8.footer -->
+      <div id="footer">
+        <div class="blank"></div>
+        <div class="footer_ul">
+            <!-- 第一欄 -->
+            <ul>
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li>
+                            <h1>
+                                <img src="img/index/index-footer/logo all.svg" alt="">
+                            </h1>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="copyright">
+                            &copy;ZanGan.aestheticsCourse
+                        </li>
+                    </div>
+                </div>
+            </ul>
+            <!-- 第二欄 -->
+            <ul>
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li>
+                            <h1 class="eng"> Access</h1>
+                            <!-- &nbsp;空白,可以一直增加 -->
+                            <p>
+                            <h3>
+                                <div class="addr">
+                                    32462 <br>
+                                    台北市枕頭村乃貓巷第一個盆栽下 3F
+                                </div>
+                                <div class="time">
+                                    <h3>電話號碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02-9900206</h3>
+                                    <h3>營業時間&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:30-20:00</h3>
+                                    <h3>公休日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;星期二/三 (國定假期)</h3>
+                                </div>
+                            </h3>
+                            </p>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="icon_soc">
+                            <img src="img/index/index-footer/社群軟體icon.svg" alt="">
+                        </li>
+                    </div>
+                </div>
+            </ul>
+            <!-- 第三欄 -->
+            <ul>
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li class="contact">
+                            <a href="contact.html">
+                                <h1 class="eng"> Contact</h1>
+                            </a>
+                            <h3> 有什麼想詢問的嗎?</h3>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="faq">
+                            <a href="faq.html">
+                                <h1 class="eng"> FAQ</h1>
+                            </a>
+                            <h3> 一些常見的問題</h3>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+  </footer>
+  <!-- boootstrap cdn_JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
