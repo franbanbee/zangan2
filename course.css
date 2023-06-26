@@ -361,7 +361,7 @@ h4{
 
 	width: 100%;
 	height: auto;
-	background-color: #3C4935;
+	background-color: rgba(60, 73, 53,.8);
 	justify-content: center;
 	align-items: flex-start;
 }
