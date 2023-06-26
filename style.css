@@ -1813,14 +1813,13 @@ img {
 
     #footer .blank {
         background-color: #3C4935;
-        /* background-color: red; */
         width: 30%;
         height: 8vh;
         /* position: absolute;
         left: 70px;
         top: 2vh; */
 
-        margin: -4vh 0 0 0;
+        margin: -6vh 0 0 0;
     }
 
     /* 調整新版footer */
