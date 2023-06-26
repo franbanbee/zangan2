@@ -267,6 +267,17 @@ img {
     /* border: solid 3px red; */
 }
 /* topbar */
+/* header購物車的數字 */
+.navigation .num-cart{
+    height: 15px;
+    margin-top: -15px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+  }
+
 #topbar {
     display: none;
     display: flex;

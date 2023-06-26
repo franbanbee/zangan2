@@ -21,6 +21,7 @@ $('.smoove_3').smoove({
 // })
 
 // -----------------------------------------
+//<!-- 長期短期選擇 動態滑動條 -->
 function line() {
 	var w = 0;
 	$('#chose ul > li').each(function(index) {
@@ -120,16 +121,16 @@ let courseLong = document.querySelector('#list2');
 
 
 	function showShort(){
-		courseShort.style.display = 'block'; //顯示
-		courseLong.style.display = 'none';  //隱藏
-		changeClassA();
-		}
-	function showLong(){
-		courseLong.style.display = 'block'; //顯示
-		courseShort.style.display = 'none';  //隱藏
-		changeClassD();
-		}
-
+ 	courseShort.style.display = 'block'; //顯示
+ 	courseLong.style.display = 'none';  //隱藏
+ 	changeClassA();
+ 	}
+ 	function showLong(){ 	
+	courseLong.style.display = 'block'; //顯示
+ 	courseShort.style.display = 'none';  //隱藏
+	changeClassD();
+ 	}
+	
 
 		
 //隨著上面按鈕點選，切換下方資訊欄
