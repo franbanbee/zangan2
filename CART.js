@@ -30,13 +30,13 @@
   
   //Data Setting
   var products=[
-    {changeBG:"A",ture_id:"A",class_id:"A",class_name:"A",name:"經典Muko香水",course_content: "週五 下午14:00-16:00共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7",price:8000,cart:false, follow:false},
-    {changeBG:"B",ture_id:"B",class_id:"B",class_name:"B",name:"綁帶A字長裙",course_content: "週四 下午14:00-16:00共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7", price:1500, cart:false, follow:false},
-    {changeBG:"C",ture_id:"C",class_id:"C",class_name:"C",name:"大叉叉褲",course_content: "週三 下午14:00-16:00共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7",price:2000,cart:false, follow:false}
+    {changeBG:"A",ture_id:"A",class_id:"A",class_name:"A",name:"經典Muko香水",course_content: "週五 下午14:00-16:00，共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7",price:8000,cart:false, follow:false},
+    {changeBG:"B",ture_id:"B",class_id:"B",class_name:"B",name:"特調精油香水",course_content: "週四 下午14:00-16:00，共6堂<br>4/1、4/8、4/15、4/22、4/29、5/6", price:7000, cart:false, follow:false},
+    {changeBG:"C",ture_id:"C",class_id:"C",class_name:"C",name:"香水與情感美學",course_content: "週三 下午14:00-16:00，共6堂<br>3/29、4/5、4/12、4/19、4/26、5/3",price:8500,cart:false, follow:false}
   ];
   var products2=[
-  {changeBG:"D",ture_id:"D",class_id:"D",class_name:"D",name:"我咬欸欸欸",course_content: "週五 下午14:00-16:00共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7",price:1000,cart:false, follow:false},
-  {changeBG:"E",ture_id:"E",class_id:"E",class_name:"E",name:"璇傳奢燒",course_content: "週四 下午14:00-16:00共6堂<br>3/3、3/10、3/17、3/24、3/31、4/7", price:1500, cart:false, follow:false},
+  {changeBG:"D",ture_id:"D",class_id:"D",class_name:"D",name:"香水蘵人",course_content: "週二 下午14:00-16:00，共20堂<br>6/8-8/15",price:9900,cart:false, follow:false},
+  {changeBG:"E",ture_id:"E",class_id:"E",class_name:"E",name:"IPSCA法式奢華",course_content: "週四 下午14:00-16:00，共18堂<br>7/10-9/8", price:9500, cart:false, follow:false},
 ];
   
   var cart_list = [];
