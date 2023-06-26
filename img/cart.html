@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="icon" href="img/index/favicon3.ico">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        body,
+        ul,
+        li,
+        div,
+        p,
+        h1,
+        h2,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li,
+        ol {
+            list-style: none;
+        }
+
+        #cart {
+            height: 100vh;
+        }
+
+        .content {
+            width: 100%;
+            margin: -10vh auto;
+        }
+
+        /* .logo {
+            margin: 10px 0;
+        } */
+
+        /* 關閉按鈕 */
+        /* .logo span {
+            display: inline-block;
+            float: right;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            background: #ff0000;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        } */
+
+        .cartList ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* price Quanlity subtotal */
+        .cartList .str h3 {
+            margin: 0 0 0 -32rem;
+        }
+
+        /* subtotal */
+        .cartList .str1 {
+            margin: 0 0 0 -5%;
+        }
+
+        /* course... */
+        .cartList ul:nth-of-type(1) {
+            display: flex;
+            margin-top: 125px;
+            margin-left: -1.5%;
+
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #000;
+            line-height: 24px;
+            letter-spacing: 0.12em;
+        }
+
+        /* 茶藝興區A班 列*/
+        .cartList ul:nth-of-type(2) {
+            margin: 20px 0;
+            height: 6vh;
+        }
+
+        .cartList ul li {
+            color: #666666;
+            text-align: center;
+            line-height: 25px;
+            margin: 0 -8%;
+        }
+        /* 數量加總的css */
+        #cart .cal,
+        #cart .cal2{
+            width: 7%;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 單價$8000 */
+        .cartList ul li input[name="price"] {
+            border: none;
+            background: transparent;
+            width: 80px;
+            text-align: center;
+        }
+
+        /* 計算方塊數字 */
+        .cartList ul li input[name="amount"] {
+            /* width: 45px; */
+            width: 20px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-left: none;
+            border-right: none;
+            height: 21px;
+
+            color:#3c4935;
+            font-size: 1rem;
+            letter-spacing: 0.12em;
+            font-family: 'Unna', serif;
+        }
+
+        /* 計算方塊+-符號 */
+        .cartList ul li input[name="minus"],
+        .cartList ul li input[name="plus"] {
+            height: 25px;
+            border: 1px #fff solid;
+            width: 25px;
+            text-align: center;
+            background-color: #fff;
+
+            color: #797474;
+            font-size: 0.75rem;
+        }
+
+        /* 第一直行 */
+        .cartList ul li:nth-of-type(1) {
+            width: 130px;
+        }
+
+        /* 第二直行 */
+        .cartList ul li:nth-of-type(2) {
+            width: 25%;
+            margin-right: -7%;
+            margin-left: -20%;
+            text-align: start;
+        }
+
+        /* 單價 */
+        .cartList ul li:nth-of-type(3) {
+            width: 130px;
+        }
+
+        /* Quanlity */
+        .cartList ul li:nth-of-type(4) {
+            width: 130px;
+        }
+
+        /* subtotal */
+        .cartList ul li:nth-of-type(5) {
+            width: 130px;
+        }
+
+        /* 購物車總計 */
+        .cartList ol {
+            float: right;
+            clear: both;
+            margin-top: 10vh;
+            margin-right: 4%;
+        }
+
+        .cartList ol div {
+            height: 11vh;
+            text-align: center;
+            line-height: 11vh;
+        }
+
+        /* 中hr */
+        .cartList ol hr {
+            width: 350px;
+            height: 0;
+            border-color: #797474;
+        }
+
+        .cartList ol div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* 送出訂單按鈕  */
+        .cartList .sent {
+            margin: 28vh 0 0 20%;
+        }
+
+        /* NT$16000 */
+        .cartList ol li:nth-of-type(1) {
+            width: 80px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        /* 活動 列 */
+        .cartList ul:nth-of-type(3) {
+            height: 8vh;
+            margin: 30px 0;
+        }
+
+        /* 金工山林遊: 悠悠 */
+        .cartList .act h2 {
+            width: 10rem;
+            margin-left: -8%;
+        }
+
+        /*  course..  茶藝.. 活動..*/
+        .cartList .item {
+            margin: 0 4%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 活動整個 */
+        .cartList .act {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 8%;
+        }
+
+        /* cart hr長度  */
+        #cart .hr1 {
+            width: 90.5%;
+            margin-left: 5%;
+            border-color: #797474;
+        }
+
+        /* 短hr */
+        #cart .mini1 {
+            width: 15px;
+            border-color: #797474;
+            margin: 0 1rem 0 -1rem;
+            margin: 0 10% 0 -9%;
+        }
+
+        /* 文字 */
+        #cart .a1,
+        #cart .noon2{
+            font-size: 0.875rem;
+            font-weight: 500;
+            flood-color: #5c5c5c;
+            line-height: 1.5rem;
+            letter-spacing: 0.12em;
+        }
+
+        #cart .teaa h2 {
+            color: #5c5c5c;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            line-height: 1.5rem;
+            font-size: 1rem;
+        }
+
+        #cart #price1,
+        #cart #price0,
+        .cartList ul li input[name="price"],
+        #cart .oneprice {
+            color: #3c4935;
+            font-size: 1rem;
+            line-height: 30px;
+            letter-spacing: 0.12em;
+            font-family: 'Unna', serif;
+        }
+        #cart .act h3{
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            line-height: 1.5rem;
+        }
+        #cart .act h1{
+            font-size: 1.5rem;
+            letter-spacing: 0.12em;
+            line-height: 1.5rem;
+            color: #5c5c5c;
+        }
+        #cart .act h2{
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            line-height: 1.5rem;
+            color: #5c5c5c;
+        }
+        #cart ol h2{
+            color: #1D201D;
+            font-weight: 500;
+            line-height: 1.5rem;
+            letter-spacing: 0.12em;
+        }
+        #cart #totalPrice{
+            color: #3c4935;
+            /* font-size: 1.5rem; */
+            /* line-height: 30px; */
+            letter-spacing: 0.12em;
+            width: 6rem;
+            font-family: 'Unna', serif;
+        }
+        #cart .sent h3{
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            line-height: 20px;
+        }
+        #cart .more h3{
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0em;
+            font-family: 'Unna', serif;
+        }
+
+        /* #cart .mini1::after{
+            content: "";
+            width: 15px;
+        } */
+
+        /* .cartList ol li span {
+            display: inline-block;
+            float: right;
+            width: 80px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            background: #ff0000;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 5px;
+            margin-right: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        } */
+
+        /* RWD桌機 */
+        @media (min-width:992px) {
+
+            #cart .small3,
+            #cart .small4 {
+                display: none;
+            }
+        }
+
+        /* RWD手機 */
+        @media (max-width:576px) {
+            #cart {
+                width: 100%;
+            }
+
+            #cart .nav {
+                margin-left: -28%;
+                margin-bottom: 1vh;
+            }
+
+            #cart .deta {
+                margin-left: 13%;
+            }
+
+            #cart .cartList .item {
+                margin: -2vh 0 0 -13%;
+            }
+
+            #cart .cartList .str {
+                display: none;
+            }
+
+            #cart .hr1 {
+                width: 333px;
+                margin-left: -7%;
+                margin-bottom: 6vh;
+            }
+
+            #cart .cartList ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            #cart .a1 {
+                width: 80%;
+                margin: 5vh 0 0 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            #cart #first {
+                margin: -8vh 0 10vh -10%;
+                margin-top: -5vh;
+                margin-bottom: 5vh;
+                height: 10vh;
+            }
+
+            #cart .teaa h2 {
+                margin: 2.5vh 0 0 -105%;
+            }
+
+            #cart .cal {
+                margin: -10vh 0 0 -50%;
+                width: 20%;
+            }
+
+            #cart .oneprice {
+                display: none;
+            }
+
+            #cart #price0 {
+                margin: -3vh 0 0 55%;
+            }
+
+            #cart .small3 {
+                margin: 1vh 0 -2.5vh -80%;
+            }
+
+            #cart .mini1 {
+                margin: -5vh 0 8vh 60%;
+            }
+
+            /* 活動 */
+            #cart .active {
+                margin: 0 0 0 -20%;
+            }
+
+            #cart .small4 {
+                margin: -3.5vh 0 1.2vh -98%;
+            }
+
+            #cart .act {
+                margin: 1vh 0 0 -9%;
+            }
+
+            #cart .noon2 {
+                display: none;
+            }
+
+            #cart #price1 {
+                margin: -3vh 0 0 50%;
+            }
+
+            #cart .cal2 {
+                margin: 1vh 0 0 -67%;
+                width: 22%;
+            }
+
+            #cart .mini2 {
+                margin: -12vh 0 11vh 55%;
+            }
+
+            /* 購物車總計 */
+            #cart ol {
+                margin: 0 18% 2vh 0;
+            }
+
+            #cart ol hr {
+                width: 276px;
+            }
+
+            #cart .sent {
+                margin: 0 0 0 8%;
+                width: 276px;
+            }
+        }
+    </style>
+</head>
+
+<!--onload，在加载时计算好原始金额-->
+
+<body onload="total()">
+
+    <!-- topbar 首頁區  -->
+    <header id="topbar">
+        <ul class="menu">
+            <li><a href="about.html">
+                    <h3>關於蘵感</h3>
+                </a></li>
+            <li><a href="news.html">
+                    <h3>最新消息</h3>
+                </a></li>
+            <li><a href="course.html">
+                    <h3>課程介紹</h3>
+                </a></li>
+            <li><a href="media.html">
+                    <h3>蘵感文章</h3>
+                </a></li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="img/index/index-topbar/logo.svg" alt="logo">
+        </a>
+        <!-- 選單列 -->
+        <nav class="navigation">
+            <ul class="icon">
+                <li><a href="signup.html" class="icon_signup">
+                        <h3>快速報名</h3>
+                        <img src="img/index/index-topbar/立即報名（白）.svg" alt="立即報名（白）">
+                    </a></li>
+                <li><a href="login.html" class="icon_login">
+                        <img src="img/index/index-topbar/user.svg" alt="user">
+                        <h3>登入</h3>
+                    </a>
+                </li>
+                <li><a href="cart.html"><img src="img/index/index-topbar/cart.svg" alt="cart" width="40"
+                            height="40"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- topbarm 首頁區  -->
+    <header id="topbarm">
+        <div class="nav_box">
+            <!-- 漢堡按鈕 -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- 選單列 -->
+            <nav class="navigation">
+                <ul class="menu">
+                    <li>
+                        <a href="signup.html" class="icon_signup">
+                            <h3>快速報名</h3>
+                            <img src="img/index/index-topbar/立即報名（白）.svg" alt="立即報名（白）">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <h3>關於蘵感</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <h3>最新消息</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course.html">
+                            <h3>課程介紹</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="media.html">
+                            <h3>蘵感文章</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="icon_login">
+                            <img src="img/index/index-topbar/user.svg" alt="user">
+                            <h3>登入</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/index/index-topbar/logo.svg" alt="logo">
+            </a>
+        </h1>
+        <!-- 購物車 -->
+        <li>
+            <a href="cart.html">
+                <img src="img/index/index-topbar/cart.svg" alt="cart">
+            </a>
+        </li>
+
+    </header>
+
+    <!-- 購物車區 -->
+    <main id="cart">
+        <!-- 上面導覽列 -->
+        <div class="nav">
+            <h3>CART</h3>
+            <h1>購物車</h1>
+        </div>
+        <!-- 資料核對區  -->
+        <nav>
+            <div class="deta">
+                <h2>資料核對</h2>
+                <p><span class="bold">您好，林洛洛！</span> <br>
+                    請確認以下預約的課程是否正確，謝謝配合。</p>
+                <h3>我們將寄簡章到您的信箱：
+                    <span class="eng">lolitama@gmail.com</span>
+                </h3>
+            </div>
+        </nav>
+        <!-- 內容區 -->
+        <div class="content">
+            <div class="logo">
+                <!-- <span onclick="javascript:if (confirm('確認要關閉吗'))window.close() ">关闭</span> -->
+            </div>
+            <div class="cartList">
+                <ul>
+                    <li class="item">
+                        <h3 class="">Course</h3>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li class="str str9">
+                        <h3 class="">Price</h3>
+                    </li>
+                    <li class="str">
+                        <h3 class="">Quantity</h3>
+                    </li>
+                    <li class="str str1">
+                        <h3 class="">Subtotal</h3>
+                    </li>
+                    <!-- <li>操作</li> -->
+                </ul>
+                <hr class="hr1">
+                <ul style="display: flex;justify-content: space-between;align-items: center" id="first">
+                    <div class="small3">
+                        <img src="img/cart/top.svg" alt="">
+                    </div>
+                    <li class="item teaa">
+                        <h2>茶藝興趣A班</h2>
+                    </li>
+                    <li class="a1">
+                        <h3>週五下午14:00-16:00，共6堂</h3>
+                        <h3>3/3、3/10、3/17、3/24、3/31、4/7</h3>
+                    </li>
+                    <li class="oneprice">
+                        $<input type="text" name="price" value="8000">
+                    </li>
+                    <li class="cal"><input type="button" name="minus" value="-" onclick="minus(0)"><input type="text"
+                            name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0)"></li>
+                    <li id="price0">$ 8000</li>
+                    <hr class="mini1">
+                    <!-- <li>
+                        <p onclick="save()">移入收藏</p>
+                        <p onclick="delete1()">删除</p>
+                    </li> -->
+                </ul>
+                <hr class="hr1">
+                <ul class="active"
+                    style="display: flex;justify-content: space-between;align-items: center; margin: 20px 0;">
+                    <div class="small4">
+                        <img src="img/cart/down.svg" alt="">
+                    </div>
+                    <li class="item">
+                        <div class="act">
+                            <h3>活動</h3>
+                            <h1>4/13</h1>
+                            <h2>金工山林遊: 悠悠</h2>
+                        </div>
+                    </li>
+                    <li class="noon2">下午14:00-16:00，共1堂</li>
+                    <li class="oneprice">$<input type="text" name="price" value="8000"></li>
+                    <li class="cal2"><input type="button" name="minus" value="-" onclick="minus(1)"><input type="text"
+                            name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1)"></li>
+                    <li id="price1">$ 8000</li>
+                    <hr class="mini1 mini2">
+                    <!-- <li>
+                    <p onclick="save()">移入收藏</p>
+                    <p onclick="delete1()">删除</p>
+                </li> -->
+                </ul>
+                <hr class="hr1 hr2">
+                <!-- 購物車總計 -->
+                <ol>
+                    <hr>
+                    <div>
+                        <h2>購物車總計</h2>
+                        <li id="totalPrice">&nbsp;</li>
+                    </div>
+                    <!-- <li><span>结算</span></li> -->
+                    <hr>
+                </ol>
+                <!-- 送出訂單按鈕 -->
+                <li>
+                    <div class="sent">
+                        <button>
+                            <a href="reserve.html">
+                                <h3>送出預約訂單</h3>
+                            </a>
+                        </button>
+                    </div>
+                </li>
+                <!-- 上一個步驟 -->
+                <div class="more">
+                    <a href="signup suc.html">
+                        <h3>Prev Step</h3>
+                    </a>
+                    <img src="img/news/left arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="blank"></div>
+        <div class="footer_ul">
+            <!-- 第一欄 -->
+            <ul>
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li>
+                            <h1>
+                                <img src="img/index/index-footer/logo all.svg" alt="logo all">
+                            </h1>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="copyright">
+                            &copy;ZanGan.aestheticsCourse
+                        </li>
+                    </div>
+                </div>
+            </ul>
+            <!-- 第二欄 -->
+            <ul class="item2">
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li>
+                            <a href="about.html#contact">
+                                <h1 class="eng"> Access</h1>
+                                <!-- &nbsp;空白,可以一直增加 -->
+                                <p>
+                                    <h3>
+                                        <div class="addr">
+                                            32462 <br>
+                                            台北市枕頭村乃貓巷第一個盆栽下 3F
+                                        </div>
+                                        <div class="time">
+                                            <h3>電話號碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02-9900206
+                                            </h3>
+                                            <h3>營業時間&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:30-20:00
+                                            </h3>
+                                            <h3>公休日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;星期二/三
+                                                (國定假期)</h3>
+                                        </div>
+                                    </h3>
+                                </p>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="icon_soc">
+                            <a href="about.html#contact">
+                                <img src="img/index/index-footer/社群軟體icon.svg" alt="社群軟體icon">
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+            <!-- 第三欄 -->
+            <ul class="item3">
+                <div class="footer_li">
+                    <div class="footer_nav">
+                        <li class="contact">
+                            <a href="about.html#contact_connect">
+                                <h1 class="eng"> Contact</h1>
+                            </a>
+                            <h3> 有什麼想詢問的嗎?</h3>
+                        </li>
+                    </div>
+                    <div class="footer_main">
+                        <li class="faq">
+                            <a href="about.html#contact_faq">
+                                <h1 class="eng"> FAQ</h1>
+                            </a>
+                            <h3> 一些常見的問題</h3>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- jQuery Core 3.7.0原始碼,一定要放在最上面,先被執行 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- 自訂的js,一定要放在最下面,最後被執行 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+    //减法
+    function minus(index) {
+        //獲取當前数量的值
+        var amounts = document.getElementsByName("amount");
+
+        //得到第一個amount的元素的value属性的值
+        var count = parseInt(amounts[index].value); //數量加1
+
+        if (count <= 1) {
+            alert("請選擇至少一種課程");
+        } else {
+            //得到第一個amount的元素的value属性的值
+            var count = parseInt(amounts[index].value) - 1; //數量加1
+
+            //重新把count的值绑定在数量文本框里
+            amounts[index].value = count;
+            var prices = document.getElementsByName("price");
+            var price = parseFloat(prices[index].value);
+            //乘以Math.pow(10,2)的原因为避免失真
+            var totalMoney = ((price * Math.pow(10, 2)) * count) / Math.pow(10, 2);
+
+            document.getElementById("price" + index).innerHTML = "$" + totalMoney;
+        }
+
+        total();
+
+    }
+
+    //加法
+    function plus(index) {
+
+        //獲取當前数量的值
+        var amounts = document.getElementsByName("amount");
+
+        //得到第一個amount的元素的value属性的值
+        var count = parseInt(amounts[index].value) + 1; //数量加1
+
+        //重新把count的值绑定在数量文本框里
+        amounts[index].value = count;
+
+        //當前操作端口的價格也要重新计算
+        //得到當前端口的單價
+        var prices = document.getElementsByName("price");
+        var price = parseFloat(prices[index].value);
+        //乘以Math.pow(10,2)的原因为避免失真
+        var totalMoney = ((price * Math.pow(10, 2)) * count) / Math.pow(10, 2);
+
+        //把當前價格顯示在文本中
+        document.getElementById("price" + index).innerHTML = "$" + totalMoney;
+
+        total();
+    }
+
+
+    //求總金额
+
+    function total() {
+
+        //得到所有的數量
+        var counts = document.getElementsByName("amount");
+
+        //得到所有的單價
+        var prices = document.getElementsByName("price");
+
+        var sumMoney = 0;
+
+        for (var i = 0; i < counts.length; i++) {
+
+            //乘以Math.pow(10,2)的原因为避免失真
+            sumMoney += (parseFloat(prices[i].value) * Math.pow(10, 2) * parseInt(counts[i].value) / Math.pow(10, 2));
+        }
+
+        //把總金額顯示再指定的元素中
+        document.getElementById("totalPrice").innerHTML = "NT$ " + sumMoney;
+
+    }
+
+
+    //加入收藏
+    // function save() {
+    //     if (confirm("確認要收藏吗？")) {
+    //         alert("收藏成功！");
+    //     }
+
+    // }
+
+    //删除
+    // function delete1() {
+    //     if (confirm("確認要删除吗？")) {
+    //         var del = document.getElementById("first");
+    //         del.parentNode.removeChild(del);
+    //         alert("删除成功！！");
+    //     }
+    // }
+</script>
