@@ -18,12 +18,6 @@
 //     // 显示 #cart
 //     $("#cart").show();
 
-//   // 滚动到 #cart 的顶部位置
-//   // $('html, body').animate({
-//   //   scrollTop: $("#cart").offset().top }, 0);
-//     $('html, body').animate({ scrollTop: 0 }, 0); // 0 表示没有滚动动画，直接跳转到目标位置
-//   });
-
 //Html Template
 
   var product_list_template = "<div class='chosen'  onclick=\"changeBackground('{{changeBG}}')\" id='{{ture_id}}' ><a class='detail' onclick='changeClass{{class_id}}()'><h3 class='class_name'>{{class_name}}</h3><div class='box_inner'><h1 class='name'>{{name}}</h1><h2 class='course_content'>{{course_content}}</h2></div><div class='price'><p>$</p><h3>{{price}}</h3></div><div class='cart'><div data-pdid='{{id}}' class='cart_icon'><img src='img/course_item/newcar.svg'></div></div></div>";
