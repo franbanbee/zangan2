@@ -1966,17 +1966,17 @@ img {
 
 /* 加入預約清單 箭頭 */
 #signup0 .arrow_w {
-    width: 9.8%;
-    height: 5.35vh;
+    /* width: 9.8%; */
+    /* height: 5.35vh; */
     margin: 0 32px 0 10px;
-    background-image: url(img/index/index-news/arrow\(白\).svg);
+    /* background-image: url(img/index/index-news/arrow\(白\).svg); */
 }
 
 /* 箭頭hover */
-#signup0 .arrow_w:hover {
-    margin: 0 32px 0 10px;
+#signup0 .arrow_w :hover {
+    /* margin: 0 32px 0 10px; */
     background-image: url(img/index/index-news/arrow\(黑\).svg);
-    display: block;
+    /* display: block; */
 }
 
 /* 直線hr */
