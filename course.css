@@ -104,7 +104,6 @@ h4{
 	.main-carousel{
 		width: 100%;
 		height: 48vh;
-		
 	}
 	.carousel-cell img{
 		height: 48vh;
@@ -247,6 +246,12 @@ h4{
 		.flickity-button{
 			color: transparent;
 		}
+
+		.main-carousel {
+			width: 100%;
+			height: 48vh;
+			margin-top: 8vh;
+		}
 }
 
 @media (max-width:430px){
@@ -348,6 +353,7 @@ h4{
 		#courseIntro .button{
 			display: none;
 		}
+
 }
 /* 課程區大圖 *5 section  */
 #courseAll{
@@ -630,7 +636,8 @@ h4{
 		font-size: .8rem;
 	}
 	.container .next_btn svg {
-		right: -5%;
+		width: 24%;
+		right: -4%;
 	}
 	.container > section:hover .img-parallax{
 		animation: scaleOOO 1s  ease-in-out forwards;
@@ -671,6 +678,14 @@ h4{
 	}
 	#courseAll h2{
 		display: none;
+	}
+	#courseAll a {
+		font-size: .75rem;
+		/* margin-left: -12%; */
+	}
+	.container .next_btn svg {
+		width: 39%;
+		right: -4%;
 	}
 }
 

@@ -39,11 +39,13 @@ function animateCards() {
 //  圖片淡入動畫  <!-- jQuery Smoove -->
 $('.smoove').smoove({
 	offset:'40%',
+  min_width:0
 	// moveX: '200px',
 	// moveY: '200px'
  });
  $('.smoove_2').smoove({
 	offset:'45%',
+  min_width:0
  });
 
 //地圖api
