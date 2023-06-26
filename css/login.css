@@ -385,10 +385,3 @@ body {
     width: 20px;
     height: auto;
 }
-
-/* RWD手機 */
-@media (max-width:576px) {
-    #login .right-side{
-        display: none;
-    }
-}
